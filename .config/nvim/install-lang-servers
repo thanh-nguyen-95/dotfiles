@@ -1,0 +1,1 @@
+npm install -g vscode-html-languageserver-bin typescript typescript-language-server vscode-css-languageserver-bin prettier svelte-language-server vscode-json-languageserver eslint npm-check-updates yarn
