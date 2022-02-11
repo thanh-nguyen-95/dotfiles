@@ -1,1 +1,1 @@
-nnoremap <leader>pv :Fern . -reveal=%  -drawer -keep -toggle<CR>
+nnoremap <leader>pv :Fern . -reveal=%  -drawer -width=30 -keep -toggle<CR>

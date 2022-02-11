@@ -1,4 +1,11 @@
 " set guicursor=
+set encoding=utf-8
+set path+=**
+set wildmode=longest,list,full
+set wildmenu
+set wildignore+=**/node_modules/*
+set wildignore+=**/.git/*
+set wildignore+=**/.next/*
 set relativenumber
 set nohlsearch
 set hidden
@@ -11,24 +18,21 @@ set nu
 set nowrap
 set noswapfile
 set nobackup
+set nowritebackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set termguicolors
 set scrolloff=8
 set noshowmode
-set signcolumn=yes
+set signcolumn=number
 set isfname+=@-@
 set ls=0
-
-" Give more space for displaying messages.
-set cmdheight=1
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=100
-
-" Don't pass messages to |ins-completion-menu|.
+set laststatus=2
+set cmdheight=2
+set updatetime=300
 set shortmess+=c
-
 set colorcolumn=80
+set completeopt=menu,menuone,noselect
+set ignorecase
+set smartcase
