@@ -8,7 +8,7 @@ super + Return
 
 # browser
 super + shift + Return
-	firefox
+	google-chrome-stable
 
 # program launcher
 	#rofi -show drun
@@ -22,11 +22,6 @@ super + Escape
 # lock screen
 super + shift + BackSpace
 	betterlockscreen -s dimblur
-
-# flameshot
-Print
-	flameshot gui
-
 
 #
 # bspwm hotkeys
