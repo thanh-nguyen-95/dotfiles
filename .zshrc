@@ -192,4 +192,4 @@ export NVM_DIR="$HOME/.config/nvm"
 eval "$(starship init zsh)"
 
 # FZF config to ignore files/folders
-export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,.next/*}"'
+export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,.next/*,.docusaurus/*}"'

@@ -3,6 +3,7 @@ alias df='df -h'
 alias free='free -m'
 alias ls='ls -a --group-directories-first --color=auto'
 alias la='ls -a --group-directories-first --color=auto'
+alias ll='ls -a --group-directories-first --color=auto -lh'
 alias add-chakra='yarn add @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4'
 # package manager
 alias upd='sudo pacman -Syu'
