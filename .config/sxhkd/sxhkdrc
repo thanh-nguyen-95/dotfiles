@@ -21,7 +21,7 @@ super + Escape
 
 # lock screen
 super + shift + BackSpace
-	betterlockscreen -s dimblur
+	xset s activate
 
 #
 # bspwm hotkeys

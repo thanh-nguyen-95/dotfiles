@@ -9,6 +9,8 @@ wal -R &
 picom &
 ibus-daemon -xdvr &
 gnome-keyring-daemon --start --components=pkcs11 &
+xset s 300 5
+xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock
 
 # pywal
 #bspc config normal_border_color "$color1"
