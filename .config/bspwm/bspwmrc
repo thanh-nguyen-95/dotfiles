@@ -3,10 +3,12 @@
 . "${HOME}/.cache/wal/colors.sh"
 
 sxhkd &
+xsetroot -cursor_name left_ptr &
 wal -R &
 ~/.config/polybar/launch.sh &
 picom &
 ibus-daemon -xdvr &
+gnome-keyring-daemon --start --components=pkcs11 &
 
 # pywal
 #bspc config normal_border_color "$color1"

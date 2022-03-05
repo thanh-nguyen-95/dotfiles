@@ -180,16 +180,20 @@ ttyctl -f
 # initialize completion
 compinit -u -d "$compfile"
 
-# nvm
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# FZF config to ignore files/folders
+export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,.next/*,.docusaurus/*}"'
 
 # pywal
 (cat ~/.cache/wal/sequences &)
 
+# nvm
+# export NVM_DIR="$HOME/.config/nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# fnm
+export PATH=/home/tn/.fnm:$PATH
+eval "`fnm env`"
+
 # starship prompt
 eval "$(starship init zsh)"
-
-# FZF config to ignore files/folders
-export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,.next/*,.docusaurus/*}"'
