@@ -12,6 +12,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " UI
 Plug 'gruvbox-community/gruvbox'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'sainnhe/everforest'
 Plug 'lambdalisue/fern.vim'
 Plug 'antoinemadec/FixCursorHold.nvim'
 
@@ -22,6 +23,7 @@ Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'itchyny/lightline.vim'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 "FZF
