@@ -4,10 +4,6 @@ alias free='free -m'
 alias ls='ls -a --group-directories-first --color=auto'
 alias la='ls -a --group-directories-first --color=auto'
 alias ll='ls -a --group-directories-first --color=auto -lh'
-alias add-chakra='yarn add @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4'
-# package manager
-alias upd='sudo pacman -Syu'
-alias yupd='yay -Syu'
 # git
 alias g='git'
 alias gba='git branch -a'
@@ -29,7 +25,6 @@ alias gpu='git push -u origin'
 alias gst='git status'
 # apps
 alias ngrok='~/ngrok'
-alias code='codium'
 # display
 alias mirrorscreen='xrandr --fb 1920x1080 --output eDP1 --mode 1280x720 --scale-from 1920x1080 --output HDMI2 --mode 1920x1080 --scale 1x1 --same-as eDP1'
 alias laptopscreen='xrandr --output eDP1 --transform none --mode 1366x768'

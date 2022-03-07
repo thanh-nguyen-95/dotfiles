@@ -8,9 +8,11 @@ wal -R &
 ~/.config/polybar/launch.sh &
 picom &
 ibus-daemon -xdvr &
-gnome-keyring-daemon --start --components=pkcs11 &
+#gnome-keyring-daemon --start --components=pkcs11 &
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
 xset s 300 5
-xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock
+xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock &
 
 # pywal
 #bspc config normal_border_color "$color1"
@@ -35,6 +37,6 @@ bspc config pointer_follows_focus true
 bspc config remove_unplugged_monitors true
 
 bspc rule -a Screenkey manage=off
-bspc rule -a telegram-desktop desktop='^4'
-bspc rule -a space desktop='^5'
+bspc rule -a telegram-desktop desktop='^4' --folow --focus
+bspc rule -a space desktop='^5' --folow --focus
 

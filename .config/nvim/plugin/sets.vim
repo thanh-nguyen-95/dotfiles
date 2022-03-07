@@ -36,3 +36,4 @@ set colorcolumn=80
 set completeopt=menu,menuone,noselect
 set ignorecase
 set smartcase
+set modifiable
