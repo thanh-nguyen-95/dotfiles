@@ -11,9 +11,13 @@ super + shift + Return
 	google-chrome-stable
 
 # program launcher
-	#rofi -show drun
+#rofi -show drun
 super + p
 	rofi -combi-modi window,drun -show combi -modi combi
+
+#rofi -show drun
+Print
+	flameshot gui
 
 # make sxhkd reload its configuration files:
 super + Escape
