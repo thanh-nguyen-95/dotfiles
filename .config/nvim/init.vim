@@ -19,6 +19,7 @@ Plug 'antoinemadec/FixCursorHold.nvim'
 " Utilities
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'folke/which-key.nvim'
 "Plug 'tpope/vim-commentary'
 Plug 'numToStr/Comment.nvim'
 Plug 'jiangmiao/auto-pairs'
