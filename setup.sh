@@ -1,12 +1,12 @@
 # Clean
-rm -rf .config/bspwm
-rm -rf .config/sxhkd
-rm -rf .config/polybar
-rm -rf .config/alacritty
-rm -rf .config/nvim
-rm -rf .config/rofi
-rm -rf .config/ranger
-rm -rf .config/picom.conf
+rm -rf ~/.config/bspwm
+rm -rf ~/.config/sxhkd
+rm -rf ~/.config/polybar
+rm -rf ~/.config/alacritty
+rm -rf ~/.config/nvim
+rm -rf ~/.config/rofi
+rm -rf ~/.config/ranger
+rm -rf ~/.config/picom.conf
 rm -rf ~/.gitconfig
 rm -rf ~/.ngrok2
 rm -rf ~/ngrok
@@ -31,3 +31,8 @@ ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 ln -s ~/dotfiles/.prettierrc ~/.prettierrc
 ln -s ~/dotfiles/redshift.conf ~/redshift.conf
+
+# Fonts
+mkdir -p ~/.local/share/fonts
+cp ./fonts/* ~/.local/share/fonts
+fc-cache -f -v
