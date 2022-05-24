@@ -11,16 +11,12 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " UI
 Plug 'gruvbox-community/gruvbox'
-Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-Plug 'sainnhe/everforest'
 Plug 'lambdalisue/fern.vim'
 Plug 'antoinemadec/FixCursorHold.nvim'
 
 " Utilities
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'folke/which-key.nvim'
-"Plug 'tpope/vim-commentary'
 Plug 'numToStr/Comment.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
