@@ -1,4 +1,5 @@
 # Clean
+rm -rf ~/.config/awesome
 rm -rf ~/.config/bspwm
 rm -rf ~/.config/sxhkd
 rm -rf ~/.config/polybar
@@ -16,6 +17,7 @@ rm -rf ~/.prettierrc
 rm -rf ~/redshift.conf
 
 # Link
+ln -s ~/dotfiles/.config/awesome ~/.config/awesome
 ln -s ~/dotfiles/.config/bspwm ~/.config/bspwm
 ln -s ~/dotfiles/.config/sxhkd ~/.config/sxhkd
 ln -s ~/dotfiles/.config/polybar ~/.config/polybar
