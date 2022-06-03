@@ -187,5 +187,9 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{n
 export PATH=/home/tn/.fnm:$PATH
 eval "`fnm env`"
 
-# Starship
-eval "$(starship init zsh)"
+# # Starship
+# eval "$(starship init zsh)"
+
+# PURE https://github.com/sindresorhus/pure
+autoload -U promptinit; promptinit
+prompt pure
