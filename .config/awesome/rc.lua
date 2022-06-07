@@ -260,6 +260,8 @@ globalkeys = gears.table.join(
               {description = "quit awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "Return", function () awful.spawn("google-chrome-stable") end,
               {description = "open chrome", group = "awesome"}),
+    awful.key({ modkey,           }, "Print", function () awful.spawn("flameshot gui") end,
+              {description = "take screen shot", group = "launcher"}),
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
