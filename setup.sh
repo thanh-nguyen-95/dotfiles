@@ -7,6 +7,7 @@ rm -rf ~/.config/alacritty
 rm -rf ~/.config/nvim
 rm -rf ~/.config/rofi
 rm -rf ~/.config/ranger
+rm -rf ~/.config/flameshot
 rm -rf ~/.config/picom.conf
 rm -rf ~/.config/starship.toml
 rm -rf ~/.config/fontconfig/conf.d/30-family-defaults.conf
@@ -27,6 +28,7 @@ ln -s ~/dotfiles/.config/polybar ~/.config/polybar
 ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi
+ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
 ln -s ~/dotfiles/.config/ranger ~/.config/ranger
 ln -s ~/dotfiles/.config/picom.conf ~/.config/picom.conf
 ln -s ~/dotfiles/.config/starship.toml ~/.config/starship.toml
