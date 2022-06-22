@@ -32,7 +32,7 @@ ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
 ln -s ~/dotfiles/.config/ranger ~/.config/ranger
 ln -s ~/dotfiles/.config/picom.conf ~/.config/picom.conf
 ln -s ~/dotfiles/.config/starship.toml ~/.config/starship.toml
-ln -s ~/dotfiles/.config/fontconfig/conf.d/30-family-defaults.conf
+ln -s ~/dotfiles/.config/fontconfig/conf.d/30-family-defaults.conf ~/.config/fontconfig/conf.d/30-family-defaults.conf
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.ngrok2 ~/.ngrok2
 ln -s ~/dotfiles/ngrok ~/ngrok
