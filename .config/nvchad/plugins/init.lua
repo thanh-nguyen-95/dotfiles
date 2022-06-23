@@ -4,5 +4,7 @@ return {
     config = function()
       require("custom.plugins.null-ls").setup()
     end,
-  }
+  },
+  ["tpope/vim-surround"] = {},
+  ["tpope/vim-fugitive"] = {},
 }
