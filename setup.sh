@@ -4,7 +4,7 @@ rm -rf ~/.config/bspwm
 rm -rf ~/.config/sxhkd
 rm -rf ~/.config/polybar
 rm -rf ~/.config/alacritty
-rm -rf ~/.config/nvim
+#rm -rf ~/.config/nvim
 rm -rf ~/.config/rofi
 rm -rf ~/.config/ranger
 rm -rf ~/.config/flameshot
@@ -27,6 +27,7 @@ ln -s ~/dotfiles/.config/sxhkd ~/.config/sxhkd
 ln -s ~/dotfiles/.config/polybar ~/.config/polybar
 ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
+ln -s ~/dotfiles/.config/nvchad ~/.config/nvim/lua/custom
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi
 ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
 ln -s ~/dotfiles/.config/ranger ~/.config/ranger
