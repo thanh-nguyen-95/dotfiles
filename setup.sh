@@ -5,6 +5,7 @@ rm -rf ~/.config/sxhkd
 rm -rf ~/.config/polybar
 rm -rf ~/.config/alacritty
 #rm -rf ~/.config/nvim
+rm -rf ~/.config/nvim/lua/custom 
 rm -rf ~/.config/rofi
 rm -rf ~/.config/ranger
 rm -rf ~/.config/flameshot
@@ -20,13 +21,15 @@ rm -rf ~/.prettierrc
 rm -rf ~/redshift.conf
 rm -rf ~/wallapers
 
+mkdir -p ~/.config/fontconfig/conf.d/
+
 # Link
 ln -s ~/dotfiles/.config/awesome ~/.config/awesome
 ln -s ~/dotfiles/.config/bspwm ~/.config/bspwm
 ln -s ~/dotfiles/.config/sxhkd ~/.config/sxhkd
 ln -s ~/dotfiles/.config/polybar ~/.config/polybar
 ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
-ln -s ~/dotfiles/.config/nvim ~/.config/nvim
+# ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 ln -s ~/dotfiles/.config/nvchad ~/.config/nvim/lua/custom
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi
 ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
@@ -41,7 +44,7 @@ ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 ln -s ~/dotfiles/.prettierrc ~/.prettierrc
 ln -s ~/dotfiles/redshift.conf ~/redshift.conf
-ln -s ~/dotfiles/wallpapers ~/wallpapers
+cp ~/dotfiles/wallpapers ~/wallpapers
 
 # Fonts
 mkdir -p ~/.local/share/fonts
