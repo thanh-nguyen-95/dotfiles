@@ -1,3 +1,2 @@
--- example file i.e lua/custom/init.lua
-
--- load your globals, autocmds here or anything .__.
+-- called when which-key is removed
+require("core.utils").load_mappings()

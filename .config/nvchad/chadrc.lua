@@ -1,7 +1,7 @@
 local M = {}
 
 M.ui = {
-	theme = "gruvbox",
+	theme = "kanagawa",
 }
 
 M.plugins = {
@@ -10,6 +10,9 @@ M.plugins = {
 		lspconfig = {
 			setup_lspconf = "custom.plugins.lspconfig",
 		},
+	},
+	remove = {
+		"folke/which-key.nvim",
 	},
 }
 
