@@ -6,12 +6,13 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Tray icons
 nm-applet &
+
 volumeicon &
 
 # Power managament
 xfce4-power-manager &
 
-# GNOME polket agent
+# GNOME polkit agent
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Display timeout / sleep / poweroff
