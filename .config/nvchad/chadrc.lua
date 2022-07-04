@@ -6,6 +6,16 @@ M.ui = {
 
 M.plugins = {
 	user = require("custom.plugins"),
+	override = {
+		["hrsh7th/nvim-cmp"] = {
+			sources = {
+				{ name = "nvim_lsp" },
+				{ name = "buffer" },
+				{ name = "nvim_lua" },
+				{ name = "path" },
+			},
+		},
+	},
 	options = {
 		lspconfig = {
 			setup_lspconf = "custom.plugins.lspconfig",
