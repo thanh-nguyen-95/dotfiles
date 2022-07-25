@@ -3,61 +3,30 @@ local M = {}
 M.disabled = {
   n = {
       -- general
-      ["<C-h>"] = { "<C-w>h", " window left" },
-      ["<C-l>"] = { "<C-w>l", " window right" },
-      ["<C-j>"] = { "<C-w>j", " window down" },
-      ["<C-k>"] = { "<C-w>k", " window up" },
+      ["<C-h>"] = "",
+      ["<C-l>"] = "",
+      ["<C-j>"] = "",
+      ["<C-k>"] = "",
 
       -- lspconfig
-      ["<leader>ls"] = {
-         function()
-            vim.lsp.buf.signature_help()
-         end,
-         "   lsp signature_help",
-      },
-      ["<leader>ra"] = {
-         function()
-            require("nvchad.ui.renamer").open()
-         end,
-         "   lsp rename",
-      },
-      ["[d"] = {
-         function()
-            vim.diagnostic.goto_prev()
-         end,
-         "   goto prev",
-      },
-      ["d]"] = {
-         function()
-            vim.diagnostic.goto_next()
-         end,
-         "   goto_next",
-      },
-      ["<leader>q"] = {
-         function()
-            vim.diagnostic.setloclist()
-         end,
-         "   diagnostic setloclist",
-      },
-      ["<leader>fm"] = {
-         function()
-            vim.lsp.buf.formatting()
-         end,
-         "   lsp formatting",
-      },
-
+      ["<leader>ls"] = "",
+      ["<leader>ra"] = "",
+      ["[d"] = "",
+      ["d]"] = "",
+      ["<leader>q"] = "",
+      ["<leader>fm"] = "",
       -- nvimtree
-      ["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "   toggle nvimtree" },
-      ["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "   focus nvimtree" },
+      ["<C-n>"] = "",
+      ["<leader>e"] = "",
 
       -- telescope
-      ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "  find files" },
-      ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "  find all" },
-      ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "   live grep" },
-      ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "  find buffers" },
-      ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "  help page" },
-      ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "   find oldfiles" },
-      ["<leader>tk"] = { "<cmd> Telescope keymaps <CR>", "   show keys" },
+      ["<leader>ff"] = "",
+      ["<leader>fa"] = "",
+      ["<leader>fw"] = "",
+      ["<leader>fb"] = "",
+      ["<leader>fh"] = "",
+      ["<leader>fo"] = "",
+      ["<leader>tk"] = "",
   }
 }
 

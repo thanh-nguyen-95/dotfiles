@@ -15,10 +15,22 @@ M.plugins = {
 				{ name = "path" },
 			},
 		},
-	},
-	options = {
-		lspconfig = {
-			setup_lspconf = "custom.plugins.lspconfig",
+		["nvim-treesitter/nvim-treesitter"] = {
+			ensure_installed = {
+				"html",
+				"css",
+				"json",
+				"svelte",
+				"typescript",
+				"tsx",
+				"markdown",
+			},
+		},
+		["neovim/nvim-lspconfig"] = {
+			config = function()
+				require("plugins.configs.lspconfig")
+				require("custom.plugins.lspconfig")
+			end,
 		},
 	},
 	remove = {
