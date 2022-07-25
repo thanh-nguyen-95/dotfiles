@@ -40,10 +40,4 @@ M.plugins = {
 
 M.mappings = require("custom.mappings")
 
-M.options = {
-	user = function()
-		require("custom.options")
-	end,
-}
-
 return M
