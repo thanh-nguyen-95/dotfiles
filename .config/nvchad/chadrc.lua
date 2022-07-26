@@ -16,19 +16,10 @@ M.plugins = {
 			},
 		},
 		["nvim-treesitter/nvim-treesitter"] = {
-			ensure_installed = {
-				"html",
-				"css",
-				"json",
-				"svelte",
-				"typescript",
-				"tsx",
-				"markdown",
-			},
+			ensure_installed = { "all" },
 		},
 		["neovim/nvim-lspconfig"] = {
 			config = function()
-				require("plugins.configs.lspconfig")
 				require("custom.plugins.lspconfig")
 			end,
 		},

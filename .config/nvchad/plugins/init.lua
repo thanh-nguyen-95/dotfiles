@@ -5,6 +5,9 @@ return {
 			require("custom.plugins.null-ls")
 		end,
 	},
-	["tpope/vim-surround"] = {},
-	["tpope/vim-fugitive"] = {},
+	["kylechui/nvim-surround"] = {
+        config = function ()
+           require("nvim-surround").setup()
+        end
+    },
 }
