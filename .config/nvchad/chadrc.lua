@@ -15,11 +15,6 @@ M.plugins = {
 				{ name = "path" },
 			},
 		},
-		["neovim/nvim-lspconfig"] = {
-			config = function()
-				require("custom.plugins.lspconfig")
-			end,
-		},
 	},
 	remove = {
 		"folke/which-key.nvim",

@@ -81,12 +81,12 @@ M.lspconfig = {
 			"   goto_next",
 		},
 
-		["<leader>="] = {
-			function()
-				vim.lsp.buf.formatting()
-			end,
-			"   lsp formatting",
-		},
+    ["<leader>="] = {
+      function()
+        vim.lsp.buf.formatting()
+      end,
+      "   lsp formatting",
+    },
 	},
 }
 

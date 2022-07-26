@@ -1,9 +1,8 @@
 -- called when which-key is removed
 require("core.utils").load_mappings()
 
-print('hehe')
-
 vim.opt.guicursor = ""
+vim.opt.clipboard = ""
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -26,6 +25,8 @@ vim.opt.undofile = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 
@@ -38,7 +39,7 @@ vim.opt.cmdheight = 1
 
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
-vim.opt.updatetime = 50
+vim.opt.updatetime = 200
 
 -- Don't pass messages to |ins-completion-menu|.
 vim.opt.shortmess:append("c")
