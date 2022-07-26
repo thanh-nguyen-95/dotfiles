@@ -15,9 +15,6 @@ M.plugins = {
 				{ name = "path" },
 			},
 		},
-		["nvim-treesitter/nvim-treesitter"] = {
-			ensure_installed = { "all" },
-		},
 		["neovim/nvim-lspconfig"] = {
 			config = function()
 				require("custom.plugins.lspconfig")
