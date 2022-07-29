@@ -24,7 +24,7 @@ return {
 
 			local lspconfig = require("lspconfig")
 
-			local servers = { "html", "cssls", "jsonls", "tailwindcss", "tsserver", "svelte" }
+			local servers = { "html", "cssls", "jsonls", "tsserver", "svelte" }
 
 			for _, lsp in ipairs(servers) do
 				lspconfig[lsp].setup({
