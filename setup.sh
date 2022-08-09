@@ -41,6 +41,8 @@ ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 ln -s ~/dotfiles/.prettierrc ~/.prettierrc
 ln -s ~/dotfiles/redshift.conf ~/redshift.conf
 ln -s ~/dotfiles/.xprofile ~/.xprofile
+sudo rm /etc/profile
+sudo ln -s ~/dotfiles/profile /etc/profile
 
 # Fonts
 rm -rf ~/.config/fontconfig/conf.d/30-family-defaults.conf

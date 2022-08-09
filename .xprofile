@@ -4,22 +4,8 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.local/bin:$PATH"
 
-# Tray icons
-nm-applet &
-
-volumeicon &
-
-# Power managament
-xfce4-power-manager &
-
-# GNOME polkit agent
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
 # Display timeout / sleep / poweroff
 xset dpms 600 900 1200
 
 # Keyboard rate
 xset r rate 350 60
-
-# Startup apps
-ibus-daemon -xdr &

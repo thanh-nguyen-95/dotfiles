@@ -5,6 +5,7 @@ xsetroot -cursor_name left_ptr &
 ibus-daemon -xdvr &
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
+cat ~/.cache/wal/sequences &
 
 # pywal
 #bspc config normal_border_color "$color1"
