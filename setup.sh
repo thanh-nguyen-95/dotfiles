@@ -11,13 +11,13 @@ rm -rf ~/.config/ranger
 rm -rf ~/.config/flameshot
 rm -rf ~/.config/picom.conf
 rm -rf ~/.config/starship.toml
+rm -rf ~/.config/redshift.conf
 rm -rf ~/.gitconfig
 rm -rf ~/.ngrok2
 rm -rf ~/ngrok
 rm -rf ~/.zshrc
 rm -rf ~/.zsh_aliases
 rm -rf ~/.prettierrc
-rm -rf ~/redshift.conf
 rm -rf ~/.xprofile
 
 # Link
@@ -33,13 +33,13 @@ ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
 ln -s ~/dotfiles/.config/ranger ~/.config/ranger
 ln -s ~/dotfiles/.config/picom.conf ~/.config/picom.conf
 ln -s ~/dotfiles/.config/starship.toml ~/.config/starship.toml
+ln -s ~/dotfiles/.config/redshift.conf ~/.config/redshift.conf
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.ngrok2 ~/.ngrok2
 ln -s ~/dotfiles/ngrok ~/ngrok
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 ln -s ~/dotfiles/.prettierrc ~/.prettierrc
-ln -s ~/dotfiles/redshift.conf ~/redshift.conf
 ln -s ~/dotfiles/.xprofile ~/.xprofile
 sudo rm /etc/profile
 sudo ln -s ~/dotfiles/profile /etc/profile
