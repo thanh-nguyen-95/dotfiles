@@ -4,7 +4,6 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.local/bin:$PATH"
 export SSH_AUTH_SOCK
-
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 
 # Display timeout / sleep / poweroff
@@ -13,11 +12,13 @@ xset dpms 600 900 1200
 # Keyboard rate
 xset r rate 350 60
 
+# Restore pywal session
+# Must be invoked before polybar launch
+wal -R &
+
 # Startup apps
 sxhkd &
 xsetroot -cursor_name left_ptr &
-~/.config/polybar/launch.sh &
 ibus-daemon -xdvr &
+~/.config/polybar/launch.sh &
 
-# Restore pywal session
-wal -R
