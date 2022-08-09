@@ -1,11 +1,4 @@
 #! /bin/sh
-sxhkd &
-xsetroot -cursor_name left_ptr &
-~/.config/polybar/launch.sh &
-ibus-daemon -xdvr &
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
-
 . "${HOME}/.cache/wal/colors.sh"
 
 # pywal
