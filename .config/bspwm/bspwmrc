@@ -5,19 +5,19 @@ xsetroot -cursor_name left_ptr &
 ibus-daemon -xdvr &
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
-cat ~/.cache/wal/sequences &
+
+. "${HOME}/.cache/wal/colors.sh"
 
 # pywal
-#bspc config normal_border_color "$color1"
 bspc config normal_border_color "transparent"
-bspc config active_border_color "#801d69"
-bspc config focused_border_color "#801d69"
-bspc config presel_feedback_color "#801d69"
+bspc config active_border_color "$color2"
+bspc config focused_border_color "$color15"
+bspc config presel_feedback_color "$color1"
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
 bspc config border_width         4
-bspc config window_gap           4
+bspc config window_gap           0
 
 bspc config split_ratio          0.50
 bspc config borderless_monocle   false

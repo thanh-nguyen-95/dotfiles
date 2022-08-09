@@ -9,3 +9,6 @@ xset dpms 600 900 1200
 
 # Keyboard rate
 xset r rate 350 60
+
+# Restore pywal session
+wal -R

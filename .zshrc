@@ -189,4 +189,3 @@ eval "`fnm env`"
 
 # Starship
 eval "$(starship init zsh)"
-
