@@ -12,13 +12,16 @@ xset dpms 600 900 1200
 # Keyboard rate
 xset r rate 350 60
 
+# Cursor
+xsetroot -cursor_name left_ptr
+
 # Restore pywal session
 # Must be invoked before polybar launch
 wal -R
 
 # Startup apps
 sxhkd &
-xsetroot -cursor_name left_ptr &
 ibus-daemon -xdvr &
+picom &
 ~/.config/polybar/launch.sh &
 
