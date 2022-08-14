@@ -18,7 +18,7 @@ rm -rf ~/ngrok
 rm -rf ~/.zshrc
 rm -rf ~/.zsh_aliases
 rm -rf ~/.prettierrc
-rm -rf ~/.xinitrc
+rm -rf ~/.xprofile
 
 # Link
 ln -s ~/dotfiles/.config/awesome ~/.config/awesome
@@ -40,7 +40,7 @@ ln -s ~/dotfiles/ngrok ~/ngrok
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 ln -s ~/dotfiles/.prettierrc ~/.prettierrc
-ln -s ~/dotfiles/.xinitrc ~/.xinitrc
+ln -s ~/dotfiles/.xprofile ~/.xprofile
 sudo rm /etc/profile
 sudo ln -s ~/dotfiles/profile /etc/profile
 
