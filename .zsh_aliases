@@ -25,7 +25,7 @@ alias gm='git merge --no-ff'
 alias gpd='git push -d origin'
 alias gpu='git push -u origin'
 alias gst='git status'
-alias gcl='git clone'
+alias gcl='git clone https://github.com/'
 # apps
 alias ngrok='~/ngrok'
 # display
