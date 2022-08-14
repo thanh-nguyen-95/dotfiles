@@ -9,6 +9,8 @@ M.disabled = {
 		["<C-k>"] = "",
 		["<leader>rn"] = "",
 		["<leader>n"] = "",
+		["j"] = "",
+		["k"] = "",
 
 		-- lspconfig
 		["<leader>ls"] = "",

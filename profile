@@ -55,3 +55,28 @@ echo $PATH | grep -q "/home/tn/.local/bin:" || export PATH="/home/tn/.local/bin:
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
+
+# Exports
+export XDG_CONFIG_HOME="$HOME/.config"
+export SSH_AUTH_SOCK
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+
+# Display timeout / sleep / poweroff
+xset dpms 600 900 1200
+
+# Keyboard rate
+xset r rate 350 60
+
+# Cursor
+xsetroot -cursor_name left_ptr
+
+# Restore pywal session
+# Must be invoked before polybar launch
+wal -R
+
+# Startup apps
+sxhkd &
+ibus-daemon -xdr &
+picom &
+~/.config/polybar/launch.sh &
+
