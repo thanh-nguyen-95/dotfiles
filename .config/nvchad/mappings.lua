@@ -41,6 +41,10 @@ M.disabled = {
 		["<leader>wK"] = "",
 		["<leader>wk"] = "",
 	},
+	v = {
+		["j"] = "",
+		["k"] = "",
+	},
 }
 
 M.general = {
@@ -83,12 +87,12 @@ M.lspconfig = {
 			"   goto_next",
 		},
 
-    ["<leader>="] = {
-      function()
-        vim.lsp.buf.formatting()
-      end,
-      "   lsp formatting",
-    },
+		["<leader>="] = {
+			function()
+				vim.lsp.buf.formatting()
+			end,
+			"   lsp formatting",
+		},
 	},
 }
 
