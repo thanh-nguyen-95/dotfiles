@@ -44,6 +44,10 @@ ln -s ~/dotfiles/.xprofile ~/.xprofile
 sudo rm /etc/profile
 sudo ln -s ~/dotfiles/profile /etc/profile
 
+sudo chmod 774 ~/.config/bspwm/bspwmrc
+sudo chmod 774 ~/.config/sxhkd/sxhkdrc
+sudo chmod 774 ~/.config/polybar/launch.sh
+
 # Fonts
 rm -rf ~/.config/fontconfig/conf.d/30-family-defaults.conf
 mkdir -p ~/.config/fontconfig/conf.d/
@@ -55,3 +59,6 @@ fc-cache -f -v
 # Wallpapers
 rm -rf ~/wallpapers
 cp ~/dotfiles/wallpapers ~/wallpapers -r
+
+# Set linux to use local time
+sudo timedatectl set-local-rtc 1

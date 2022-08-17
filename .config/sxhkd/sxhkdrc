@@ -11,11 +11,17 @@ super + shift + Return
 	google-chrome-stable
 
 # program launcher
-#rofi -show drun
 super + p
 	rofi -combi-modi window,drun -show combi -modi combi
 
-#rofi -show drun
+# Brightness
+super + {b,shift + b}
+  brightnessctl s 5%{+,-}
+
+# Volumne
+super + {v,shift + v}
+  pamixer {-i,-d} 2
+
 Print
 	flameshot gui
 
