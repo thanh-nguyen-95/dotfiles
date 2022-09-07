@@ -1,6 +1,7 @@
 # utilities
 alias df='df -h'
 alias free='free -m'
+alias mkdir='mkdir -p'
 alias ls='ls -a --group-directories-first --color=auto'
 alias la='ls -a --group-directories-first --color=auto'
 alias ll='ls -a --group-directories-first --color=auto -lh'
