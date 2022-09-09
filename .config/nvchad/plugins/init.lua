@@ -8,6 +8,7 @@ return {
 					require("null-ls").builtins.formatting.prettier.with({
             prefer_local = true
           }),
+					require("null-ls").builtins.formatting.prismaFmt,
 				},
 			})
 		end,
@@ -24,7 +25,7 @@ return {
 
 			local lspconfig = require("lspconfig")
 
-			local servers = { "html", "cssls", "jsonls", "tsserver", "svelte" }
+			local servers = { "html", "cssls", "jsonls", "tsserver", "svelte", "prismals" }
 
 			for _, lsp in ipairs(servers) do
 				lspconfig[lsp].setup({
