@@ -1,6 +1,7 @@
 # Clean
 rm -rf ~/.config/awesome
 rm -rf ~/.config/bspwm
+rm -rf ~/.config/hypr
 rm -rf ~/.config/sxhkd
 rm -rf ~/.config/polybar
 rm -rf ~/.config/alacritty
@@ -23,6 +24,7 @@ rm -rf ~/.xprofile
 # Link
 ln -s ~/dotfiles/.config/awesome ~/.config/awesome
 ln -s ~/dotfiles/.config/bspwm ~/.config/bspwm
+ln -s ~/dotfiles/.config/hypr ~/.config/hypr
 ln -s ~/dotfiles/.config/sxhkd ~/.config/sxhkd
 ln -s ~/dotfiles/.config/polybar ~/.config/polybar
 ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
