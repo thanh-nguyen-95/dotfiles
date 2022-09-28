@@ -6,18 +6,12 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces"],
-    "modules-center": ["tray"],
-    // "modules-right": ["tray", "pulseaudio", "backlight", "network", "cpu", "memory", "temperature", "keyboard-state", "battery", "clock"],
-    "modules-right": ["tray", "pulseaudio", "backlight", "network", "cpu", "memory", "temperature", "keyboard-state", "clock"],
+    "modules-center": [],
+    // "modules-right": ["tray", "pulseaudio", "backlight", "network", "cpu", "memory", "disk", "temperature", "keyboard-state", "battery", "clock"],
+    "modules-right": ["tray", "pulseaudio", "backlight", "network", "cpu", "memory", "disk", "temperature", "keyboard-state", "clock"],
     "wlr/workspaces": {
-      "format": "{icon} {name}",
-      "on-click": "activate",
-      "active-only": true,
-      "format-icons": {
-        "urgent": "",
-        "active": "",
-        "default": ""
-      }
+      "format": "{name}",
+      "on-click": "activate"
     },
     "keyboard-state": {
         "numlock": true,
@@ -28,15 +22,13 @@
             "unlocked": ""
         }
     },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
     "tray": {
         // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
         // "timezone": "America/New_York",
+        "format": "{:%I:%M %p | %a, %d/%m/%Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
