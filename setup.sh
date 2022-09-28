@@ -5,6 +5,7 @@ rm -rf ~/.config/hypr
 rm -rf ~/.config/sxhkd
 rm -rf ~/.config/polybar
 rm -rf ~/.config/alacritty
+rm -rf ~/.config/waybar
 #rm -rf ~/.config/nvim
 rm -rf ~/.config/nvim/lua/custom 
 rm -rf ~/.config/rofi
@@ -28,6 +29,7 @@ ln -s ~/dotfiles/.config/hypr ~/.config/hypr
 ln -s ~/dotfiles/.config/sxhkd ~/.config/sxhkd
 ln -s ~/dotfiles/.config/polybar ~/.config/polybar
 ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
+ln -s ~/dotfiles/.config/waybar ~/.config/waybar
 # ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 ln -s ~/dotfiles/.config/nvchad ~/.config/nvim/lua/custom
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi
