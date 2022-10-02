@@ -1,25 +1,10 @@
 local M = {}
 
 M.ui = {
-	theme = "catppuccin",
+	theme = "tokyodark",
 }
 
-M.plugins = {
-	user = require("custom.plugins"),
-	override = {
-		["hrsh7th/nvim-cmp"] = {
-			sources = {
-				{ name = "nvim_lsp" },
-				{ name = "buffer" },
-				{ name = "nvim_lua" },
-				{ name = "path" },
-			},
-		},
-	},
-	remove = {
-		"folke/which-key.nvim",
-	},
-}
+M.plugins = require("custom.plugins")
 
 M.mappings = require("custom.mappings")
 

@@ -1,5 +1,23 @@
 #! /bin/sh
+
+# pywal
+wal -R
 . "${HOME}/.cache/wal/colors.sh"
+
+# keyboard repeat rate
+xset r rate 350 60
+# cursor pointer
+xsetroot -cursor_name left_ptr
+
+# keybinds
+sxhkd &
+
+# beauty
+picom &
+~/.config/polybar/launch.sh &
+
+# ibus
+ibus-daemon -xdr &
 
 # pywal
 bspc config normal_border_color "transparent"
