@@ -21,6 +21,7 @@ rm -rf ~/.zshrc
 rm -rf ~/.zsh_aliases
 rm -rf ~/.prettierrc
 rm -rf ~/.xprofile
+rm -rf ~/work.sh
 
 # Link
 ln -s ~/dotfiles/.config/awesome ~/.config/awesome
@@ -45,12 +46,15 @@ ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 ln -s ~/dotfiles/.prettierrc ~/.prettierrc
 ln -s ~/dotfiles/.xprofile ~/.xprofile
+ln -s ~/dotfiles/work.sh ~/work.sh
+
 sudo rm /etc/profile
 sudo ln -s ~/dotfiles/profile /etc/profile
 
 sudo chmod 774 ~/.config/bspwm/bspwmrc
 sudo chmod 774 ~/.config/sxhkd/sxhkdrc
 sudo chmod 774 ~/.config/polybar/launch.sh
+sudo chmod 774 ~/work.sh
 
 # Fonts
 rm -rf ~/.config/fontconfig/conf.d/30-family-defaults.conf
