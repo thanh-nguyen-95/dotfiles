@@ -7,6 +7,11 @@ researches=`ls -d ~/reseaches/*`
 # Select a directory using FZF
 selected=`printf "$projects\n$researches" | fzf`
 
+if [ -z "$selected" ]
+then
+  exit 1
+fi
+
 # Default 'cd' to selected directory
 cd $selected
 
