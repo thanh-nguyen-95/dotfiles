@@ -9,20 +9,33 @@ selected=`printf "$projects\n$researches" | fzf`
 
 if [ -z "$selected" ]
 then
+  echo 'No project selected'
   exit 1
 fi
 
-# Default 'cd' to selected directory
-cd $selected
-
 # Ask for extra command. Ex: nvim
-read -p "Extra command: " cmd
-
+options=`echo "goto;open in neovim;start dev server" | tr ';' '\n'`
+commands=`printf "$options" | fzf`
 
 # Execute extra command with selected directory
-if [ -z $cmd ]
-  then
-    exit 1
-else
-  $cmd $selected
-fi
+case "$commands" in
+  "goto")
+    cd "$selected"
+    # Required for cd command to work
+    $SHELL    
+    ;;
+
+  "open in neovim")
+    cd "$selected"
+    nvim "$selected"
+    ;;
+
+  "start dev server")
+    cd "$selected"
+    npm run dev
+    ;;
+
+  *)
+    echo "default"
+    ;;
+esac
