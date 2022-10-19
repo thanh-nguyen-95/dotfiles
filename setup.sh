@@ -12,7 +12,7 @@ rm -rf ~/.config/rofi
 rm -rf ~/.config/ranger
 rm -rf ~/.config/flameshot
 rm -rf ~/.config/picom.conf
-rm -rf ~/.config/starship.toml
+#rm -rf ~/.config/starship.toml
 rm -rf ~/.config/redshift.conf
 rm -rf ~/.gitconfig
 rm -rf ~/.ngrok2
@@ -37,7 +37,7 @@ ln -s ~/dotfiles/.config/rofi ~/.config/rofi
 ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
 ln -s ~/dotfiles/.config/ranger ~/.config/ranger
 ln -s ~/dotfiles/.config/picom.conf ~/.config/picom.conf
-ln -s ~/dotfiles/.config/starship.toml ~/.config/starship.toml
+#ln -s ~/dotfiles/.config/starship.toml ~/.config/starship.toml
 ln -s ~/dotfiles/.config/redshift.conf ~/.config/redshift.conf
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.ngrok2 ~/.ngrok2
