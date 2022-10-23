@@ -29,6 +29,7 @@ alias gst='git status'
 alias gcl='git clone https://github.com/'
 alias gpl='git pull'
 alias work='~/work.sh'
+alias config='~/config.sh'
 # apps
 alias ngrok='~/ngrok'
 # display

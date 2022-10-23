@@ -7,19 +7,3 @@ export $BROWSER = google-chrome-stable
 # Display timeout / sleep / poweroff
 xset dpms 600 900 1200
 
-# Keyboard rate
-# xset r rate 350 60
-
-# Cursor
-# xsetroot -cursor_name left_ptr
-
-# Restore pywal session
-# Must be invoked before polybar launch
-wal -R
-
-# Startup apps
-# sxhkd &
-# picom &
-# ~/.config/polybar/launch.sh &
-ibus-daemon -xdr &
-
