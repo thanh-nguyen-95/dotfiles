@@ -187,5 +187,9 @@ compinit -u -d "$compfile"
 export PATH=/home/tn/.fnm:$PATH
 eval "`fnm env`"
 
+# Deno
+export DENO_INSTALL="/home/tn/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 # Starship
 eval "$(starship init zsh)"

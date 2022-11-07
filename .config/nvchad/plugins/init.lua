@@ -1,11 +1,13 @@
 return {
-  -- INSTALL
+	-- INSTALL
+	["tpope/vim-abolish"] = {},
 	["jose-elias-alvarez/null-ls.nvim"] = {
 		after = "nvim-lspconfig",
 		config = function()
 			require("null-ls").setup({
 				sources = {
 					require("null-ls").builtins.formatting.stylua,
+					require("null-ls").builtins.formatting.prismaFmt,
 					require("null-ls").builtins.formatting.prettier.with({
 						prefer_local = true,
 					}),
@@ -25,7 +27,7 @@ return {
 
 			local lspconfig = require("lspconfig")
 
-			local servers = { "html", "cssls", "jsonls", "tsserver", "svelte", "tailwindcss" }
+			local servers = { "html", "cssls", "jsonls", "tsserver", "svelte", "tailwindcss", "prisma" }
 
 			for _, lsp in ipairs(servers) do
 				lspconfig[lsp].setup({
@@ -35,7 +37,7 @@ return {
 			end
 		end,
 	},
-  -- OVERRIDE
+	-- OVERRIDE
 	["hrsh7th/nvim-cmp"] = {
 		override_options = function()
 			local cmp = require("cmp")
@@ -53,6 +55,6 @@ return {
 			}
 		end,
 	},
-  -- REMOVE
+	-- REMOVE
 	["folke/which-key.nvim"] = false,
 }

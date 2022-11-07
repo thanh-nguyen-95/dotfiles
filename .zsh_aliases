@@ -32,6 +32,7 @@ alias work='~/work.sh'
 alias config='~/config.sh'
 # apps
 alias ngrok='~/ngrok'
+alias vpn='warp-cli'
 # display
 alias mirrorscreen='xrandr --fb 1920x1080 --output eDP1 --mode 1280x720 --scale-from 1920x1080 --output HDMI2 --mode 1920x1080 --scale 1x1 --same-as eDP1'
 alias laptopscreen='xrandr --output eDP1 --transform none --mode 1366x768'
