@@ -6,6 +6,7 @@ return {
 			require("null-ls").setup({
 				sources = {
 					require("null-ls").builtins.formatting.stylua,
+					require("null-ls").builtins.formatting.prismaFmt,
 					require("null-ls").builtins.formatting.prettier.with({
 						prefer_local = true,
 					}),
@@ -23,10 +24,8 @@ return {
 		config = function()
 			local on_attach = require("plugins.configs.lspconfig").on_attach
 			local capabilities = require("plugins.configs.lspconfig").capabilities
-
 			local lspconfig = require("lspconfig")
-
-			local servers = { "html", "cssls", "jsonls", "tsserver", "svelte", "tailwindcss", "astro" }
+			local servers = { "html", "cssls", "jsonls", "tsserver", "svelte", "tailwindcss", "prismals", "astro" }
 
 			for _, lsp in ipairs(servers) do
 				lspconfig[lsp].setup({
@@ -42,6 +41,7 @@ return {
 			neogit.setup({})
 		end,
 	},
+	["tpope/vim-abolish"] = {},
 	-- OVERRIDE
 	["hrsh7th/nvim-cmp"] = {
 		override_options = function()
