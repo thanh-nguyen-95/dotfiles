@@ -1,5 +1,5 @@
 return {
-  -- INSTALL
+	-- INSTALL
 	["jose-elias-alvarez/null-ls.nvim"] = {
 		after = "nvim-lspconfig",
 		config = function()
@@ -9,6 +9,7 @@ return {
 					require("null-ls").builtins.formatting.prettier.with({
 						prefer_local = true,
 					}),
+					require("null-ls").builtins.formatting.prismaFmt,
 				},
 			})
 		end,
@@ -25,7 +26,7 @@ return {
 
 			local lspconfig = require("lspconfig")
 
-			local servers = { "html", "cssls", "jsonls", "tsserver", "svelte", "tailwindcss" }
+			local servers = { "html", "cssls", "jsonls", "tsserver", "svelte", "tailwindcss", "astro" }
 
 			for _, lsp in ipairs(servers) do
 				lspconfig[lsp].setup({
@@ -35,7 +36,13 @@ return {
 			end
 		end,
 	},
-  -- OVERRIDE
+	["TimUntersberger/neogit"] = {
+		config = function()
+			local neogit = require("neogit")
+			neogit.setup({})
+		end,
+	},
+	-- OVERRIDE
 	["hrsh7th/nvim-cmp"] = {
 		override_options = function()
 			local cmp = require("cmp")
@@ -53,6 +60,6 @@ return {
 			}
 		end,
 	},
-  -- REMOVE
+	-- REMOVE
 	["folke/which-key.nvim"] = false,
 }
