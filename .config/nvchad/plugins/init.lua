@@ -26,7 +26,18 @@ return {
 			local on_attach = require("plugins.configs.lspconfig").on_attach
 			local capabilities = require("plugins.configs.lspconfig").capabilities
 			local lspconfig = require("lspconfig")
-			local servers = { "html", "cssls", "jsonls", "tsserver", "svelte", "tailwindcss", "prismals", "astro", "rust_analyzer" }
+			local servers = {
+				-- comment to enable multi-line
+				"html",
+				"cssls",
+				"jsonls",
+				"tsserver",
+				"svelte",
+				"tailwindcss",
+				"prismals",
+				"astro",
+				"rust_analyzer",
+			}
 
 			for _, lsp in ipairs(servers) do
 				lspconfig[lsp].setup({
