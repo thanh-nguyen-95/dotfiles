@@ -1,8 +1,9 @@
-require("theprimeagen.set")
-require("theprimeagen.remap")
+require("tn.set")
+require("tn.remap")
+require("tn.packer")
 
 local augroup = vim.api.nvim_create_augroup
-local ThePrimeagenGroup = augroup('ThePrimeagen', {})
+local TN = augroup('TN', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -23,7 +24,7 @@ autocmd('TextYankPost', {
 })
 
 autocmd({"BufWritePre"}, {
-    group = ThePrimeagenGroup,
+    group = TN,
     pattern = "*",
     command = "%s/\\s\\+$//e",
 })
