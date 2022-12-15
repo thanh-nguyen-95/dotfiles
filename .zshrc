@@ -184,7 +184,7 @@ compinit -u -d "$compfile"
 # export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,.next/*,.docusaurus/*}"'
 
 # fnm
-export PATH=/home/tn/.fnm:$PATH
+export PATH="/home/tn/.local/share/fnm:$PATH"
 eval "`fnm env`"
 
 # Deno
@@ -193,3 +193,4 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Starship
 eval "$(starship init zsh)"
+
