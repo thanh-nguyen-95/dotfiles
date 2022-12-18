@@ -109,6 +109,8 @@ return require('packer').startup(function(use)
     'lukas-reineke/indent-blankline.nvim',
     config = function()
       require('indent_blankline').setup {
+        char = '┊',
+        show_trailing_blankline_indent = false,
         show_current_context = true,
         show_current_context_start = true,
       }
@@ -120,21 +122,21 @@ return require('packer').startup(function(use)
     config = function() require('nvim-autopairs').setup {} end
   })
 
-  -- use('jose-elias-alvarez/null-ls.nvim', {
-  --   config = function()
-  --     require('null-ls').setup({
-  --       sources = {
-  --         require('null-ls').builtins.formatting.stylua,
-  --         require('null-ls').builtins.formatting.prismaFmt,
-  --         require('null-ls').builtins.formatting.prettier.with({
-  --           prefer_local = true,
-  --         }),
-  --         require('null-ls').builtins.formatting.prismaFmt,
-  --         require('null-ls').builtins.formatting.rustfmt,
-  --       },
-  --     })
-  --   end
-  -- })
+  use('jose-elias-alvarez/null-ls.nvim', {
+    config = function()
+      require('null-ls').setup({
+        sources = {
+          require('null-ls').builtins.formatting.stylua,
+          require('null-ls').builtins.formatting.prismaFmt,
+          require('null-ls').builtins.formatting.prettier.with({
+            prefer_local = true,
+          }),
+          require('null-ls').builtins.formatting.prismaFmt,
+          require('null-ls').builtins.formatting.rustfmt,
+        },
+      })
+    end
+  })
 
   use('tpope/vim-abolish')
 end)
