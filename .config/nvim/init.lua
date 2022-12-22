@@ -36,6 +36,7 @@ require('packer').startup(function(use)
   }
 
   use 'theprimeagen/harpoon'
+  use 'windwp/nvim-autopairs'
 
   use { -- Tree-like file explorer
     'nvim-tree/nvim-tree.lua',
@@ -310,6 +311,9 @@ require('nvim-treesitter.configs').setup {
     },
   },
 }
+
+-- Enable Nvim Autopairs
+require('nvim-autopairs').setup()
 
 -- Harpoon
 local mark = require("harpoon.mark")
