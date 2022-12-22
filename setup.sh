@@ -1,3 +1,26 @@
+# INSTALL PACKAGES
+# ================================
+echo "Welcome to Stupid Installing Script (SIS)"
+
+if ! command -v yay &> /dev/null
+then
+  echo "Cannot find command 'yay'. Exit!"
+  exit
+fi
+
+echo "Has yay, start installing packages"
+
+yay -S bspwm sxhkd polybar rofi alacritty nvim xclip flameshot picom-ibhagwan-git zsh neofetch insect mpv libreoffice-fresh telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep mongodb-compass postman-bin starship redshift lf pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code
+
+echo "Installing Fast Node Manager"
+
+curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
+
+# CONFIG
+# ================================
+
+echo "Configuring packages"
+
 # Clean
 rm -rf ~/.config/awesome
 rm -rf ~/.config/bspwm
@@ -59,4 +82,7 @@ fc-cache -f -v
 
 # Wallpapers
 rm -rf ~/wallpapers
-cp ~/dotfiles/wallpapers ~/wallpapers -r
+mkdir -p ~/wallpapers
+ln -s ~/dotfiles/wallpapers ~/wallpapers
+
+wal -i ~/wallpapers/10.jpg
