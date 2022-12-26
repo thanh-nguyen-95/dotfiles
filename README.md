@@ -1,28 +1,13 @@
 # Dotfiles
 
-## bash
+> This is created for personal usage, will not run on all machines
 
-### ubuntu/
+## Prerequisite
 
-For Ubuntu, needs:
+- Archlinux | [EndeavourOS](https://endeavouros.com/)
 
-- neovim
+## Installation
 
-### manjaro/
-
-For manjaro, needs:
-
-- neovim
-- bash-powerline
-
-## conky
-
-For conky, tested on Ubuntu.
-
-## git
-
-Basic git configs
-
-## vscode
-
-For Visual Studio Code
+```bash
+sh setup.sh
+```
