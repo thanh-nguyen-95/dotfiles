@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S bspwm sxhkd polybar rofi alacritty nvim xclip flameshot picom-ibhagwan-git zsh neofetch insect mpv libreoffice-fresh telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep mongodb-compass postman-bin starship redshift lf pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code
+yay -S bspwm sxhkd polybar rofi alacritty nvim xclip flameshot picom-ibhagwan-git zsh neofetch insect mpv libreoffice-fresh telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep mongodb-compass postman-bin starship redshift lf pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim
 
 echo "Installing Fast Node Manager"
 
