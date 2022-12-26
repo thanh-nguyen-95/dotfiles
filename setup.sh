@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S bspwm sxhkd polybar rofi alacritty nvim xclip flameshot picom-ibhagwan-git zsh neofetch insect mpv libreoffice-fresh telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep mongodb-compass postman-bin starship redshift lf pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim
+yay -S bspwm sxhkd polybar rofi alacritty xclip flameshot picom-ibhagwan-git zsh neofetch insect mpv libreoffice-fresh telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep mongodb-compass postman-bin starship redshift lf pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome
 
 echo "Installing Fast Node Manager"
 
@@ -72,6 +72,10 @@ sudo chmod +x ~/.config/polybar/launch.sh
 sudo chmod +x ~/work.sh
 sudo chmod +x ~/config.sh
 
+# Shells
+sudo chsh -s /bin/zsh
+sudo chsh -s /bin/zsh $USER
+
 # Fonts
 rm -rf ~/.config/fontconfig/conf.d/30-family-defaults.conf
 mkdir -p ~/.config/fontconfig/conf.d/
@@ -85,4 +89,4 @@ rm -rf ~/wallpapers
 mkdir -p ~/wallpapers
 ln -s ~/dotfiles/wallpapers ~/wallpapers
 
-wal -i ~/wallpapers/10.jpg
+wal -i ~/dotfiles/wallpapers/10.jpg
