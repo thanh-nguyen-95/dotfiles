@@ -16,6 +16,11 @@ echo "Installing Fast Node Manager"
 
 curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
 
+# Docker
+# Note: must logout to take effect
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
 # CONFIG
 # ================================
 
@@ -85,8 +90,4 @@ cp ./fonts/* ~/.local/share/fonts
 fc-cache -f -v
 
 # Wallpapers
-rm -rf ~/wallpapers
-mkdir -p ~/wallpapers
-ln -s ~/dotfiles/wallpapers ~/wallpapers
-
 wal -i ~/dotfiles/wallpapers/10.jpg
