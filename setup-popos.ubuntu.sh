@@ -87,6 +87,8 @@ sudo chmod +x ~/.config/polybar/launch.sh
 sudo chmod +x ~/work.sh
 sudo chmod +x ~/config.sh
 
+sudo usermod -aG video $USER
+
 # Shells
 sudo chsh -s /bin/zsh
 sudo chsh -s /bin/zsh $USER
