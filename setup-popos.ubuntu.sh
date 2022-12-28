@@ -105,3 +105,6 @@ wal -i ~/dotfiles/wallpapers/10.jpg
 # Workspaces
 mkdir -p ~/projects
 mkdir -p ~/researches
+
+# Mouse
+sh ~/dotfiles/touchpad-setup.sh

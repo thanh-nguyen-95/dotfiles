@@ -194,3 +194,5 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 # Starship
 eval "$(starship init zsh)"
 
+# Pywal
+(cat /home/tn/.cache/wal/sequences &)
