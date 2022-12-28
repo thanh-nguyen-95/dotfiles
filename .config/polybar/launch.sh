@@ -6,6 +6,6 @@
 # Otherwise you can use the nuclear option:
 killall -q polybar
 
-polybar example
+polybar example --config=~/.config/polybar/config.ini
 
 echo "Example bar launched..."
