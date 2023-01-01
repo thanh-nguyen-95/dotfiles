@@ -49,6 +49,7 @@ rm -rf ~/.config/rofi
 rm -rf ~/.config/flameshot
 rm -rf ~/.config/picom.conf
 rm -rf ~/.config/redshift.conf
+rm -rf ~/.config/mimeapps.list
 rm -rf ~/.gitconfig
 rm -rf ~/.ngrok2
 rm -rf ~/ngrok
@@ -69,6 +70,7 @@ ln -s ~/dotfiles/.config/rofi ~/.config/rofi
 ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
 ln -s ~/dotfiles/.config/picom.conf ~/.config/picom.conf
 ln -s ~/dotfiles/.config/redshift.conf ~/.config/redshift.conf
+ln -s ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.ngrok2 ~/.ngrok2
 ln -s ~/dotfiles/ngrok ~/ngrok
@@ -101,12 +103,13 @@ mkdir -p ~/.local/share/fonts
 cp ./fonts/* ~/.local/share/fonts
 fc-cache -f -v
 
-# Wallpapers
-wal -i ~/dotfiles/wallpapers/10.jpg
-
 # Workspaces
 mkdir -p ~/projects
 mkdir -p ~/researches
 
 # Mouse
 sh ~/dotfiles/touchpad-setup.sh
+
+# Wallpapers
+wal -i ~/dotfiles/wallpapers/10.jpg
+
