@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S bspwm sxhkd polybar rofi alacritty xclip flameshot picom-ibhagwan-git zsh neofetch insect mpv libreoffice-fresh telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep mongodb-compass postman-bin starship redshift lf pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome
+yay -S bspwm sxhkd polybar rofi alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome
 
 echo "Installing Fast Node Manager"
 
@@ -20,6 +20,8 @@ curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
 # Note: must logout to take effect
 sudo groupadd docker
 sudo usermod -aG docker $USER
+sudo systemctl enable docker.service
+sudo systemctl enable docker.socket
 
 # CONFIG
 # ================================
@@ -88,6 +90,13 @@ ln -s ~/dotfiles/.config/fontconfig/conf.d/30-family-defaults.conf ~/.config/fon
 mkdir -p ~/.local/share/fonts
 cp ./fonts/* ~/.local/share/fonts
 fc-cache -f -v
+
+# Workspaces
+mkdir -p ~/projects
+mkdir -p ~/researches
+
+# Mouse
+sh ~/dotfiles/touchpad-setup.sh
 
 # Wallpapers
 wal -i ~/dotfiles/wallpapers/10.jpg
