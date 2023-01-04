@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S bspwm sxhkd polybar rofi alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome
+yay -S bspwm sxhkd polybar rofi alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome cloudflare-warp-bin
 
 echo "Installing Fast Node Manager"
 
@@ -20,8 +20,9 @@ curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
 # Note: must logout to take effect
 sudo groupadd docker
 sudo usermod -aG docker $USER
-sudo systemctl enable docker.service
-sudo systemctl enable docker.socket
+sudo systemctl enable --now docker.service
+sudo systemctl enable --now docker.socket
+sudo systemctl enable --now warp-svc.service
 
 # CONFIG
 # ================================

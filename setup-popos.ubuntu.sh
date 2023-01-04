@@ -32,6 +32,8 @@ sudo make install
 # Note: must logout to take effect
 sudo groupadd docker
 sudo usermod -aG docker $USER
+sudo systemctl enable --now docker.service
+sudo systemctl enable --now docker.socket
 
 # CONFIG
 # ================================
