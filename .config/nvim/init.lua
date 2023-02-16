@@ -257,7 +257,7 @@ vim.keymap.set('n', '<leader>pd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'html', 'css', 'json', 'lua', 'tsx', 'typescript', 'help', 'markdown', 'svelte' },
+  ensure_installed = { 'html', 'css', 'json', 'lua', 'tsx', 'typescript', 'help', 'markdown', 'svelte', 'prisma' },
 
   highlight = { enable = true },
   indent = { enable = true },
@@ -479,7 +479,7 @@ require('mason').setup()
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = { 'tailwindcss', 'tsserver', 'sumneko_lua', 'prismals', 'svelte', 'eslint' }
+local servers = { 'tailwindcss', 'tsserver', 'lua_ls', 'prismals', 'svelte', 'eslint' }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
@@ -507,7 +507,7 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-require('lspconfig').sumneko_lua.setup {
+require('lspconfig').lua_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {

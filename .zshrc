@@ -191,6 +191,10 @@ eval "`fnm env`"
 export DENO_INSTALL="/home/tn/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+# Default editor config
+export VISUAL=nvim;
+export EDITOR=nvim;
+
 # Starship
 eval "$(starship init zsh)"
 
