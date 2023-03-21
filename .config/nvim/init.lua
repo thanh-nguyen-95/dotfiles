@@ -257,7 +257,7 @@ vim.keymap.set('n', '<leader>pd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'html', 'css', 'json', 'lua', 'tsx', 'typescript', 'help', 'markdown', 'svelte' },
+  ensure_installed = { 'html', 'css', 'json', 'lua', 'tsx', 'typescript', 'help', 'markdown', 'svelte', 'prisma' },
 
   highlight = { enable = true },
   indent = { enable = true },
