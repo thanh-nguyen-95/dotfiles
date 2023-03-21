@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S bspwm sxhkd polybar rofi alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome cloudflare-warp-bin
+yay -S bspwm sxhkd polybar rofi alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome cloudflare-warp-bin caddy
 
 echo "Installing Fast Node Manager"
 
@@ -23,6 +23,9 @@ sudo usermod -aG docker $USER
 sudo systemctl enable --now docker.service
 sudo systemctl enable --now docker.socket
 sudo systemctl enable --now warp-svc.service
+
+# Caddy
+sudo setcap CAP_NET_BIND_SERVICE=+eip $(which caddy)
 
 # CONFIG
 # ================================
