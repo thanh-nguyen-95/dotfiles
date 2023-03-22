@@ -54,7 +54,6 @@ require('packer').startup(function(use)
 
   -- Git related plugins
   use 'tpope/vim-fugitive'
-  use 'lewis6991/gitsigns.nvim'
 
   use 'navarasu/onedark.nvim' -- Theme inspired by Atom
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
@@ -207,18 +206,6 @@ require('Comment').setup()
 require('indent_blankline').setup {
   char = '┊',
   show_trailing_blankline_indent = false,
-}
-
--- Gitsigns
--- See `:help gitsigns.txt`
-require('gitsigns').setup {
-  signs = {
-    add = { text = '+' },
-    change = { text = '~' },
-    delete = { text = '_' },
-    topdelete = { text = '‾' },
-    changedelete = { text = '~' },
-  },
 }
 
 -- [[ Configure Telescope ]]
@@ -395,9 +382,12 @@ require('nvim-tree').setup({
       }
     },
   },
+  filters = {
+    dotfiles = true
+  },
   actions = {
     open_file = {
-      quit_on_open = false
+      quit_on_open = true
     }
   }
 })
