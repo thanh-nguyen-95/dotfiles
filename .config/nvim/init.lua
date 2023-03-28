@@ -93,8 +93,12 @@ require("lazy").setup({
     dependencies = { "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip" },
   },
 
-  { -- Surround support
+  {
+   -- Surround support
     "kylechui/nvim-surround",
+    config = function()
+      require("nvim-surround").setup({})
+    end,
   },
 
   {
@@ -288,6 +292,8 @@ vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
 vim.smartindent = true
+vim.o.smartcase = true
+vim.o.ignorecase = true
 vim.o.wrap = false
 vim.o.swapfile = false
 vim.o.backup = false
@@ -439,37 +445,17 @@ require("nvim-treesitter.configs").setup({
         ["[]"] = "@class.outer",
       },
     },
-    swap = {
-      enable = true,
-      swap_next = {
-        ["<leader>a"] = "@parameter.inner",
-      },
-      swap_previous = {
-        ["<leader>A"] = "@parameter.inner",
-      },
-    },
+    -- swap = {
+    --   enable = true,
+    --   swap_next = {
+    --     ["<leader>a"] = "@parameter.inner",
+    --   },
+    --   swap_previous = {
+    --     ["<leader>A"] = "@parameter.inner",
+    --   },
+    -- },
   },
 })
-
--- Harpoon
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
-
-vim.keymap.set("n", "<leader>a", mark.add_file)
-vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
-
-vim.keymap.set("n", "<C-h>", function()
-  ui.nav_file(1)
-end)
-vim.keymap.set("n", "<C-n>", function()
-  ui.nav_file(2)
-end)
-vim.keymap.set("n", "<C-t>", function()
-  ui.nav_file(3)
-end)
-vim.keymap.set("n", "<C-s>", function()
-  ui.nav_file(4)
-end)
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
