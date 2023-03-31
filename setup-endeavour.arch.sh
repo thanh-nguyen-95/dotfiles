@@ -54,6 +54,8 @@ rm -rf ~/ngrok
 rm -rf ~/.prettierrc
 rm -rf ~/work.sh
 rm -rf ~/config.sh
+rm -rf ~/.tmux.conf
+rm -rf ~/.tmux.conf.local
 
 # Link
 ln -s ~/dotfiles/.config/bspwm ~/.config/bspwm
@@ -75,6 +77,8 @@ ln -s ~/dotfiles/ngrok ~/ngrok
 ln -s ~/dotfiles/.prettierrc ~/.prettierrc
 ln -s ~/dotfiles/work.sh ~/work.sh
 ln -s ~/dotfiles/config.sh ~/config.sh
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/.tmux.conf.local ~/.tmux.conf.local
 
 sudo rm /etc/profile
 sudo ln -s ~/dotfiles/profile /etc/profile
