@@ -45,14 +45,13 @@ rm -rf ~/.config/flameshot
 rm -rf ~/.config/redshift.conf
 rm -rf ~/.config/mimeapps.list
 rm -rf ~/.gitconfig
-# rm -rf ~/.bashrc
-# rm -rf ~/.bash_aliases
 rm -rf ~/.zshrc
 rm -rf ~/.zsh_aliases
 rm -rf ~/.ngrok2
 rm -rf ~/ngrok
 rm -rf ~/.prettierrc
-rm -rf ~/work.sh
+rm -rf ~/repo.sh
+rm -rf ~/dev.sh
 rm -rf ~/config.sh
 rm -rf ~/.tmux.conf
 rm -rf ~/.tmux.conf.local
@@ -68,14 +67,13 @@ ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
 ln -s ~/dotfiles/.config/redshift.conf ~/.config/redshift.conf
 ln -s ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-# ln -s ~/dotfiles/.bashrc ~/.bashrc
-# ln -s ~/dotfiles/.bash_aliases ~/.bash_aliases
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 ln -s ~/dotfiles/.ngrok2 ~/.ngrok2
 ln -s ~/dotfiles/ngrok ~/ngrok
 ln -s ~/dotfiles/.prettierrc ~/.prettierrc
-ln -s ~/dotfiles/work.sh ~/work.sh
+ln -s ~/dotfiles/repo.sh ~/repo.sh
+ln -s ~/dotfiles/dev.sh ~/dev.sh
 ln -s ~/dotfiles/config.sh ~/config.sh
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.tmux.conf.local ~/.tmux.conf.local
@@ -86,7 +84,8 @@ sudo ln -s ~/dotfiles/profile /etc/profile
 sudo chmod +x ~/.config/bspwm/bspwmrc
 sudo chmod +x ~/.config/sxhkd/sxhkdrc
 sudo chmod +x ~/.config/polybar/launch.sh
-sudo chmod +x ~/work.sh
+sudo chmod +x ~/repo.sh
+sudo chmod +x ~/dev.sh
 sudo chmod +x ~/config.sh
 
 # Shell
