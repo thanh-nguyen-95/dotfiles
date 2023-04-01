@@ -200,7 +200,3 @@ eval "$(starship init zsh)"
 
 # Pywal
 (cat /home/tn/.cache/wal/sequences &)
-
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-  tmux attach -t default || tmux new -s default
-fi
