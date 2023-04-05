@@ -68,6 +68,9 @@ require("lazy").setup({
   -- Git related plugins
   "tpope/vim-fugitive",
 
+  -- Replace with case-awareness
+  "tpope/vim-abolish",
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
