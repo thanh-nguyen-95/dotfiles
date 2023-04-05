@@ -180,12 +180,12 @@ require("lazy").setup({
   },
 
   {
-    -- Catppuccin theme
-    "catppuccin/nvim",
-    name = "catppuccin",
+    -- TokyoNight theme
+    "folke/tokyonight.nvim",
+    name = "tokyonight",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("catppuccin-mocha") -- catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+      vim.cmd.colorscheme("tokyonight-night") -- tokyonight-night, tokyonight-storm, tokyonight-moon, tokyonight-day
     end,
   },
 
@@ -232,7 +232,7 @@ require("lazy").setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = "auto",
+        theme = "tokyonight",
         component_separators = "|",
         section_separators = "",
       },
