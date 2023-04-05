@@ -97,7 +97,7 @@ require("lazy").setup({
   },
 
   {
-   -- Surround support
+    -- Surround support
     "kylechui/nvim-surround",
     config = function()
       require("nvim-surround").setup({})
@@ -154,6 +154,14 @@ require("lazy").setup({
     "windwp/nvim-autopairs",
     config = function()
       require("nvim-autopairs").setup({})
+    end,
+  },
+
+  {
+    -- Auto close tag
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
     end,
   },
 
@@ -400,7 +408,7 @@ vim.keymap.set("n", "<leader>pd", require("telescope.builtin").diagnostics, { de
 -- See `:help nvim-treesitter`
 require("nvim-treesitter.configs").setup({
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { "tsx", "typescript", "help", "vim", "prisma", "css", "html", "json", "dockerfile" },
+  ensure_installed = { "tsx", "typescript", "vim", "prisma", "css", "html", "json", "dockerfile" },
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
   highlight = { enable = true },
