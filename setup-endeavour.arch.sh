@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S bspwm sxhkd polybar rofi kitty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome cloudflare-warp-bin caddy
+yay -S bspwm sxhkd polybar rofi alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome cloudflare-warp-bin caddy gnome-keyring
 
 echo "Installing Fast Node Manager"
 
@@ -38,11 +38,10 @@ echo "Configuring packages"
 rm -rf ~/.config/bspwm
 rm -rf ~/.config/sxhkd
 rm -rf ~/.config/polybar
-rm -rf ~/.config/kitty
+rm -rf ~/.config/alacritty
 rm -rf ~/.config/nvim
 rm -rf ~/.config/rofi
 rm -rf ~/.config/flameshot
-rm -rf ~/.config/redshift.conf
 rm -rf ~/.config/mimeapps.list
 rm -rf ~/.gitconfig
 rm -rf ~/.zshrc
@@ -53,18 +52,15 @@ rm -rf ~/.prettierrc
 rm -rf ~/repo.sh
 rm -rf ~/dev.sh
 rm -rf ~/config.sh
-rm -rf ~/.tmux.conf
-rm -rf ~/.tmux.conf.local
 
 # Link
 ln -s ~/dotfiles/.config/bspwm ~/.config/bspwm
 ln -s ~/dotfiles/.config/sxhkd ~/.config/sxhkd
 ln -s ~/dotfiles/.config/polybar ~/.config/polybar
-ln -s ~/dotfiles/.config/kitty ~/.config/kitty
+ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi
 ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
-ln -s ~/dotfiles/.config/redshift.conf ~/.config/redshift.conf
 ln -s ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.zshrc ~/.zshrc
@@ -75,8 +71,6 @@ ln -s ~/dotfiles/.prettierrc ~/.prettierrc
 ln -s ~/dotfiles/repo.sh ~/repo.sh
 ln -s ~/dotfiles/dev.sh ~/dev.sh
 ln -s ~/dotfiles/config.sh ~/config.sh
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/.tmux.conf.local ~/.tmux.conf.local
 
 sudo rm /etc/profile
 sudo ln -s ~/dotfiles/profile /etc/profile
