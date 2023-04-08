@@ -97,7 +97,7 @@ require("lazy").setup({
   },
 
   {
-   -- Surround support
+    -- Surround support
     "kylechui/nvim-surround",
     config = function()
       require("nvim-surround").setup({})
@@ -158,6 +158,14 @@ require("lazy").setup({
   },
 
   {
+    -- Auto close tag
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+
+  {
     -- File explorer
     "nvim-neo-tree/neo-tree.nvim",
     version = "*",
@@ -172,12 +180,12 @@ require("lazy").setup({
   },
 
   {
-    -- Catppuccin theme
-    "catppuccin/nvim",
-    name = "catppuccin",
+    -- TokyoNight theme
+    "folke/tokyonight.nvim",
+    name = "tokyonight",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("catppuccin-mocha") -- catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+      vim.cmd.colorscheme("tokyonight-night") -- tokyonight-night, tokyonight-storm, tokyonight-moon, tokyonight-day
     end,
   },
 
@@ -224,7 +232,7 @@ require("lazy").setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = "auto",
+        theme = "tokyonight",
         component_separators = "|",
         section_separators = "",
       },
@@ -400,7 +408,7 @@ vim.keymap.set("n", "<leader>pd", require("telescope.builtin").diagnostics, { de
 -- See `:help nvim-treesitter`
 require("nvim-treesitter.configs").setup({
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { "tsx", "typescript", "help", "vim", "prisma", "css", "html", "json", "dockerfile" },
+  ensure_installed = { "tsx", "typescript", "vim", "prisma", "css", "html", "json", "dockerfile" },
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
   highlight = { enable = true },
