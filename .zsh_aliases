@@ -29,7 +29,6 @@ alias gpu='git push -u origin'
 alias gst='git status'
 alias gcl='git clone'
 alias gpl='git pull'
-alias repo='~/repo.sh'
 alias dev='~/dev.sh'
 alias config='~/config.sh'
 # apps

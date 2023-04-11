@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
 # List all directories
-sessions=`tmux list-sessions -F '#{session_name}'`
+projects=`ls -d ~/projects/*`
+researches=`ls -d ~/researches/*`
 
 # Select a directory using FZF
-selected=`printf "$sessions" | fzf`
+selected=`printf "$projects\n$researches" | fzf`
 
 if [ -z "$selected" ]
 then
-  echo 'No session selected'
+  echo 'No project selected'
   exit 1
 fi
 
-tmux attach-session -t "$selected"
-
+cd "$selected"
+$SHELL

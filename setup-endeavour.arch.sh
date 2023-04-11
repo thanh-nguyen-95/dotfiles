@@ -49,7 +49,6 @@ rm -rf ~/.zsh_aliases
 rm -rf ~/.ngrok2
 rm -rf ~/ngrok
 rm -rf ~/.prettierrc
-rm -rf ~/repo.sh
 rm -rf ~/dev.sh
 rm -rf ~/config.sh
 
@@ -68,7 +67,6 @@ ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 ln -s ~/dotfiles/.ngrok2 ~/.ngrok2
 ln -s ~/dotfiles/ngrok ~/ngrok
 ln -s ~/dotfiles/.prettierrc ~/.prettierrc
-ln -s ~/dotfiles/repo.sh ~/repo.sh
 ln -s ~/dotfiles/dev.sh ~/dev.sh
 ln -s ~/dotfiles/config.sh ~/config.sh
 
@@ -78,7 +76,6 @@ sudo ln -s ~/dotfiles/profile /etc/profile
 sudo chmod +x ~/.config/bspwm/bspwmrc
 sudo chmod +x ~/.config/sxhkd/sxhkdrc
 sudo chmod +x ~/.config/polybar/launch.sh
-sudo chmod +x ~/repo.sh
 sudo chmod +x ~/dev.sh
 sudo chmod +x ~/config.sh
 
