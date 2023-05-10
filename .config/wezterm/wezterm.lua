@@ -23,8 +23,6 @@ config.window_padding = {
 }
 config.font = wezterm.font 'Jetbrains Mono'
 config.font_size = 14.0
-config.font_hinting = "Full"
-
 
 -- and finally, return the configuration to wezterm
 return config
