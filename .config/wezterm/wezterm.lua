@@ -24,6 +24,7 @@ config.window_padding = {
 config.font = wezterm.font 'Jetbrains Mono'
 config.font_size = 14.0
 config.audible_bell = 'Disabled'
+config.adjust_window_size_when_changing_font_size = false
 
 -- and finally, return the configuration to wezterm
 return config
