@@ -114,9 +114,7 @@ require("lazy").setup({
         sources = {
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.prismaFmt,
-          null_ls.builtins.formatting.prettier.with({
-            prefer_local = true,
-          }),
+          null_ls.builtins.formatting.prettier,
         },
       })
 
@@ -523,7 +521,7 @@ local on_attach = function(_, bufnr)
 
   -- Create a command `:Format` local to the LSP buffer
   vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
-    vim.lsp.buf.format()
+    vim.lsp.buf.format({ timeout_ms = 5000 })
   end, { desc = "Format current buffer with LSP" })
 end
 
