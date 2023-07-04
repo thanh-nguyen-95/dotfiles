@@ -83,7 +83,7 @@ require("lazy").setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { "j-hui/fidget.nvim", opts = {}, tag = 'legacy' },
+      { "j-hui/fidget.nvim", opts = {}, tag = "legacy" },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       "folke/neodev.nvim",
@@ -178,12 +178,13 @@ require("lazy").setup({
   },
 
   {
-    -- TokyoNight theme
-    "folke/tokyonight.nvim",
-    name = "tokyonight",
+    -- Base16 Themes
+    "RRethy/nvim-base16",
+    name = "nvim-base16",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("tokyonight-night") -- tokyonight-night, tokyonight-storm, tokyonight-moon, tokyonight-day
+      vim.opt.background = "dark"                    -- set this to dark or light
+      vim.cmd.colorscheme("base16-gruvbox-dark-medium") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
   },
 
@@ -230,7 +231,7 @@ require("lazy").setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = "tokyonight",
+        theme = "base16",
         component_separators = "|",
         section_separators = "",
       },
