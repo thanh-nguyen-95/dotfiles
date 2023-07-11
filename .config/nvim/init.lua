@@ -178,7 +178,7 @@ require("lazy").setup({
     priority = 1000,
     config = function()
       vim.opt.background = "dark"                       -- set this to dark or light
-      vim.cmd.colorscheme("base16-atelier-forest") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
+      vim.cmd.colorscheme("base16-apathy") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
   },
 
