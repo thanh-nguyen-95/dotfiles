@@ -165,16 +165,7 @@ require("lazy").setup({
 
   {
     -- File explorer
-    "nvim-neo-tree/neo-tree.nvim",
-    version = "*",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    },
-    config = function()
-      require("neo-tree").setup({})
-    end,
+    "lambdalisue/fern.vim"
   },
 
   {
@@ -183,19 +174,8 @@ require("lazy").setup({
     name = "nvim-base16",
     priority = 1000,
     config = function()
-      vim.opt.background = "dark"                    -- set this to dark or light
+      vim.opt.background = "dark"                       -- set this to dark or light
       vim.cmd.colorscheme("base16-gruvbox-dark-medium") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
-    end,
-  },
-
-  {
-    -- Trouble list
-    "folke/trouble.nvim",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
-    config = function()
-      require("trouble").setup({})
     end,
   },
 
@@ -473,11 +453,11 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnos
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
--- Neotree
+-- Fern
 vim.keymap.set(
   "n",
   "<leader>pv",
-  ":Neotree action=focus source=filesystem reveal=true position=left toggle<cr>",
+  ":Fern . -reveal=% -toggle<cr>",
   { silent = true, noremap = true }
 )
 

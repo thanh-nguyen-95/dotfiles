@@ -7,6 +7,7 @@ alias la='ls -a --group-directories-first --color=auto'
 alias ll='ls -a --group-directories-first --color=auto -lh'
 alias v='nvim'
 alias p='pnpm'
+alias rm='gomi'
 # git
 alias g='git'
 alias gba='git branch -a'
