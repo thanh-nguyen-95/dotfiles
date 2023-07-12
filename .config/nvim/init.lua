@@ -460,7 +460,7 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 vim.keymap.set(
   "n",
   "<leader>pv",
-  ":Fern . -drawer -reveal=% -toggle <CR>",
+  ":Fern . -drawer -width=75 -reveal=% -toggle <CR>",
   { silent = true, noremap = true }
 )
 
