@@ -173,7 +173,7 @@ require("lazy").setup({
     },
     config = function()
       require("neo-tree").setup({
-        enable_git_status = false
+        enable_git_status = false,
       })
     end,
   },
@@ -184,7 +184,7 @@ require("lazy").setup({
     name = "nvim-base16",
     priority = 1000,
     config = function()
-      vim.opt.background = "dark"                       -- set this to dark or light
+      vim.opt.background = "dark"       -- set this to dark or light
       vim.cmd.colorscheme("base16-apathy") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
   },
