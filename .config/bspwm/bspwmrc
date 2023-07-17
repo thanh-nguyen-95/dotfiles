@@ -5,7 +5,7 @@ wal -R
 . "${HOME}/.cache/wal/colors.sh"
 
 # keyboard repeat rate
-xset r rate 350 60
+xset r rate 300 60
 # cursor pointer
 xsetroot -cursor_name left_ptr
 # screen saving
