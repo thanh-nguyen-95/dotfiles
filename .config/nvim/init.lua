@@ -174,6 +174,20 @@ require("lazy").setup({
     config = function()
       require("neo-tree").setup({
         enable_git_status = false,
+        window = {
+          width = 60,
+          mappings = {
+            ["l"] = "open",
+            ["h"] = "close_node",
+            ["C"] = "close_all_subnodes",
+            ["L"] = "focus_preview",
+          },
+        },
+        filesystem = {
+          follow_current_file = {
+            enabled = true,
+          },
+        },
       })
     end,
   },
@@ -467,7 +481,13 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 vim.keymap.set(
   "n",
   "<leader>pv",
-  ":Neotree action=focus source=filesystem reveal=true position=left toggle<cr>",
+  ":Neotree filesystem left toggle<cr>", -- File Explorer
+  { silent = true, noremap = true }
+)
+vim.keymap.set(
+  "n",
+  "<leader>pg",
+  ":Neotree git_status right toggle<cr>", -- File Explorer
   { silent = true, noremap = true }
 )
 
