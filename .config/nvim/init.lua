@@ -165,10 +165,17 @@ require("lazy").setup({
 
   {
     -- File explorer
-    "lambdalisue/fern.vim",
+    "nvim-neo-tree/neo-tree.nvim",
     dependencies = {
-      "lambdalisue/fern-hijack.vim"
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
     },
+    config = function()
+      require("neo-tree").setup({
+        enable_git_status = false
+      })
+    end,
   },
 
   {
@@ -456,11 +463,11 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnos
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
--- Fern
+-- Neo-Tree
 vim.keymap.set(
   "n",
   "<leader>pv",
-  ":Fern . -drawer -width=75 -reveal=% -toggle <CR>",
+  ":Neotree action=focus source=filesystem reveal=true position=left toggle<cr>",
   { silent = true, noremap = true }
 )
 
