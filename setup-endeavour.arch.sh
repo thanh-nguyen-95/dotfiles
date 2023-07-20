@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S bspwm sxhkd polybar rofi wezterm xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome cloudflare-warp-bin caddy gnome-keyring htop fd
+yay -S bspwm sxhkd polybar rofi wezterm xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome cloudflare-warp-bin caddy gnome-keyring htop fd gomi
 
 echo "Installing Fast Node Manager"
 
@@ -84,6 +84,10 @@ sudo chmod +x ~/config.sh
 # sudo chsh -s /bin/bash $USER
 sudo chsh -s /bin/zsh
 sudo chsh -s /bin/zsh $USER
+
+# External apps
+sudo cp ./pomo /usr/bin/
+sudo chmod +x /usr/bin/pomo
 
 # Fonts
 rm -rf ~/.config/fontconfig/conf.d/30-family-defaults.conf
