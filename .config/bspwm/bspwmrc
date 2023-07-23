@@ -11,7 +11,7 @@ xsetroot -cursor_name left_ptr
 # screen saving
 # xset dpms 600 900 1200
 # power manager
-xfce4-power-manager &
+# xfce4-power-manager &
 # keybinds
 sxhkd &
 
