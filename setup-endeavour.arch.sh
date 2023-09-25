@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S bspwm sxhkd polybar rofi wezterm xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome cloudflare-warp-bin caddy gnome-keyring htop fd gomi ueberzug
+yay -S bspwm awesomewm sxhkd polybar rofi alacritty wezterm xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome cloudflare-warp-bin caddy gnome-keyring htop fd gomi ueberzug
 
 echo "Installing Fast Node Manager"
 
@@ -36,6 +36,8 @@ echo "Configuring packages"
 
 # Clean
 rm -rf ~/.config/bspwm
+rm -rf ~/.config/awesome
+rm -rf ~/.config/alacritty
 rm -rf ~/.config/sxhkd
 rm -rf ~/.config/polybar
 rm -rf ~/.config/wezterm
@@ -55,6 +57,8 @@ rm -rf ~/config.sh
 
 # Link
 ln -s ~/dotfiles/.config/bspwm ~/.config/bspwm
+ln -s ~/dotfiles/.config/awesome ~/.config/awesome
+ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
 ln -s ~/dotfiles/.config/sxhkd ~/.config/sxhkd
 ln -s ~/dotfiles/.config/polybar ~/.config/polybar
 ln -s ~/dotfiles/.config/wezterm ~/.config/wezterm
