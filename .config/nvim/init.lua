@@ -83,7 +83,7 @@ require("lazy").setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { "j-hui/fidget.nvim", opts = {}, tag = "legacy" },
+      { "j-hui/fidget.nvim", opts = {}, tag = "legacy", event = "LspAttach" },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       "folke/neodev.nvim",
@@ -199,7 +199,7 @@ require("lazy").setup({
     priority = 1000,
     config = function()
       vim.opt.background = "dark"       -- set this to dark or light
-      vim.cmd.colorscheme("base16-apathy") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
+      vim.cmd.colorscheme("base16-tomorrow-night-eighties") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
   },
 
