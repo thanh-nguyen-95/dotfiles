@@ -197,3 +197,8 @@ export EDITOR=nvim;
 # Starship
 eval "$(starship init zsh)"
 
+# keyboard repeat rate
+xset r rate 300 60
+# screen saving
+xset dpms 600 900 1200
+
