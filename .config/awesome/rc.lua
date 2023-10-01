@@ -156,9 +156,9 @@ end
 screen.connect_signal("property::geometry", set_wallpaper)
 
 -- WIDGET ADDONS
-local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
-local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
-local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
+local battery_widget = require("battery-widget.battery")
+local brightness_widget = require("brightness-widget.brightness")
+local volume_widget = require("volume-widget.volume")
 
 awful.screen.connect_for_each_screen(function(s)
   -- Wallpaper
