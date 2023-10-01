@@ -76,6 +76,8 @@ ln -s ~/dotfiles/.prettierrc ~/.prettierrc
 ln -s ~/dotfiles/dev.sh ~/dev.sh
 ln -s ~/dotfiles/config.sh ~/config.sh
 
+sudo ln -s ~/dotfiles/icons/Arc /usr/share/icons/Arc
+
 sudo rm /etc/profile
 sudo ln -s ~/dotfiles/profile /etc/profile
 
