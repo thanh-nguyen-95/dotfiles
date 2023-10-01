@@ -155,6 +155,11 @@ end
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal("property::geometry", set_wallpaper)
 
+-- WIDGET ADDONS
+local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
+local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
+
 awful.screen.connect_for_each_screen(function(s)
   -- Wallpaper
   set_wallpaper(s)
@@ -212,6 +217,21 @@ awful.screen.connect_for_each_screen(function(s)
       layout = wibox.layout.fixed.horizontal,
       -- mykeyboardlayout,
       wibox.widget.systray(),
+      battery_widget({
+        font = "Play 10",
+        show_current_level = true,
+        margin_left = 4,
+        margin_right = 4,
+      }),
+      brightness_widget({
+        program = "brightnessctl",
+        type = 'icon_and_text',
+        timeout = 300, -- seconds
+        percentage = true,
+        margin_left = 4,
+        margin_right = 8,
+      }),
+      volume_widget(),
       mytextclock,
       s.mylayoutbox,
     },
@@ -317,7 +337,19 @@ globalkeys = gears.table.join(
   -- Menubar
   awful.key({ modkey }, "p", function()
     menubar.show()
-  end, { description = "show the menubar", group = "launcher" })
+  end, { description = "show the menubar", group = "launcher" }),
+  awful.key({ modkey }, "v", function()
+    volume_widget:inc(5)
+  end, { description = "Increase volume level by 5%", group = "widgets" }),
+  awful.key({ modkey, "Shift" }, "v", function()
+    volume_widget:dec(5)
+  end, { description = "Decrease volume level by 5%", group = "widgets" }),
+  awful.key({ modkey }, "b", function()
+    brightness_widget:inc()
+  end, { description = "Increase brightness level by 5%", group = "widgets" }),
+  awful.key({ modkey, "Shift" }, "b", function()
+    brightness_widget:dec()
+  end, { description = "Decrease brightness level by 5%", group = "widgets" })
 )
 
 clientkeys = gears.table.join(
