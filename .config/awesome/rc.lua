@@ -159,6 +159,9 @@ screen.connect_signal("property::geometry", set_wallpaper)
 local battery_widget = require("battery-widget.battery")
 local brightness_widget = require("brightness-widget.brightness")
 local volume_widget = require("volume-widget.volume")
+local net_speed_widget = require("net-speed-widget.net-speed")
+local cpu_widget = require("cpu-widget.cpu-widget")
+local ram_widget = require("ram-widget.ram-widget")
 
 awful.screen.connect_for_each_screen(function(s)
   -- Wallpaper
@@ -217,11 +220,12 @@ awful.screen.connect_for_each_screen(function(s)
       layout = wibox.layout.fixed.horizontal,
       -- mykeyboardlayout,
       wibox.widget.systray(),
-      battery_widget({
-        font = "Play 10",
-        show_current_level = true,
-        margin_left = 4,
-        margin_right = 4,
+      cpu_widget(),
+      ram_widget({
+        timeout = 5
+      }),
+      net_speed_widget({
+        timeout = 5
       }),
       brightness_widget({
         program = "brightnessctl",
@@ -232,6 +236,12 @@ awful.screen.connect_for_each_screen(function(s)
         margin_right = 8,
       }),
       volume_widget(),
+      battery_widget({
+        font = "Play 10",
+        show_current_level = true,
+        margin_left = 4,
+        margin_right = 4,
+      }),
       mytextclock,
       s.mylayoutbox,
     },
