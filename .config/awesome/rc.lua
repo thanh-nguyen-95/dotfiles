@@ -221,12 +221,8 @@ awful.screen.connect_for_each_screen(function(s)
       -- mykeyboardlayout,
       wibox.widget.systray(),
       cpu_widget(),
-      ram_widget({
-        timeout = 5
-      }),
-      net_speed_widget({
-        timeout = 5
-      }),
+      ram_widget(),
+      net_speed_widget(),
       brightness_widget({
         program = "brightnessctl",
         type = 'icon_and_text',
