@@ -198,7 +198,7 @@ require("lazy").setup({
     name = "nvim-base16",
     priority = 1000,
     config = function()
-      vim.opt.background = "dark"       -- set this to dark or light
+      vim.opt.background = "dark"                           -- set this to dark or light
       vim.cmd.colorscheme("base16-tomorrow-night-eighties") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
   },
@@ -247,10 +247,8 @@ require("lazy").setup({
     "lukas-reineke/indent-blankline.nvim",
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
-    opts = {
-      char = "┊",
-      show_trailing_blankline_indent = false,
-    },
+    main = "ibl",
+    opts = {},
   },
 
   -- "gc" to comment visual regions/lines
