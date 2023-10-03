@@ -113,4 +113,4 @@ mkdir -p ~/researches
 sh ~/dotfiles/touchpad-setup.sh
 
 # Wallpapers
-wal -i ~/dotfiles/wallpapers/interstellar-pixel-art.jpg
+wal -i ~/dotfiles/wallpapers/cats-pixel-art.png
