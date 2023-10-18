@@ -55,8 +55,10 @@ echo $PATH | grep -q "/home/tn/.local/bin:" || export PATH="/home/tn/.local/bin:
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
-export QT4_IM_MODULE=ibus
-export CLUTTER_IM_MODULE=ibus
 
 ibus-daemon -xdr
 
+# keyboard repeat rate
+xset r rate 300 60
+# screen saving
+xset dpms 600 900 1200
