@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S bspwm awesome sxhkd polybar rofi alacritty wezterm xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst code neovim google-chrome cloudflare-warp-bin caddy htop fd gomi ueberzug
+yay -S bspwm sxhkd polybar rofi alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst neovim google-chrome cloudflare-warp-bin htop fd gomi ueberzug
 
 echo "Installing Fast Node Manager"
 
@@ -26,9 +26,6 @@ sudo systemctl enable --now docker.socket
 # Cloudflare VPN
 sudo systemctl enable --now warp-svc.service
 
-# Caddy
-sudo setcap CAP_NET_BIND_SERVICE=+eip $(which caddy)
-
 # CONFIG
 # ================================
 
@@ -36,11 +33,9 @@ echo "Configuring packages"
 
 # Clean
 rm -rf ~/.config/bspwm
-rm -rf ~/.config/awesome
 rm -rf ~/.config/alacritty
 rm -rf ~/.config/sxhkd
 rm -rf ~/.config/polybar
-rm -rf ~/.config/wezterm
 rm -rf ~/.config/nvim
 rm -rf ~/.config/rofi
 rm -rf ~/.config/ranger
@@ -57,11 +52,9 @@ rm -rf ~/config.sh
 
 # Link
 ln -s ~/dotfiles/.config/bspwm ~/.config/bspwm
-ln -s ~/dotfiles/.config/awesome ~/.config/awesome
 ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
 ln -s ~/dotfiles/.config/sxhkd ~/.config/sxhkd
 ln -s ~/dotfiles/.config/polybar ~/.config/polybar
-ln -s ~/dotfiles/.config/wezterm ~/.config/wezterm
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi
 ln -s ~/dotfiles/.config/ranger ~/.config/ranger
@@ -93,10 +86,6 @@ sudo chmod +x ~/config.sh
 sudo chsh -s /bin/zsh
 sudo chsh -s /bin/zsh $USER
 
-# External apps
-sudo cp ./pomo /usr/bin/
-sudo chmod +x /usr/bin/pomo
-
 # Fonts
 rm -rf ~/.config/fontconfig/conf.d/30-family-defaults.conf
 mkdir -p ~/.config/fontconfig/conf.d/
@@ -108,9 +97,6 @@ fc-cache -f -v
 # Workspaces
 mkdir -p ~/projects
 mkdir -p ~/researches
-
-# Mouse
-sh ~/dotfiles/touchpad-setup.sh
 
 # Wallpapers
 wal -i ~/dotfiles/wallpapers/cats-pixel-art.png
