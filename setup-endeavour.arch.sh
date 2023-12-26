@@ -74,6 +74,9 @@ sudo ln -s ~/dotfiles/icons/Arc /usr/share/icons/Arc
 sudo rm /etc/profile
 sudo ln -s ~/dotfiles/profile /etc/profile
 
+sudo rm /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
+sudo ln -s ~/dotfiles/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
+
 sudo chmod +x ~/.config/bspwm/bspwmrc
 sudo chmod +x ~/.config/sxhkd/sxhkdrc
 sudo chmod +x ~/.config/polybar/launch.sh
