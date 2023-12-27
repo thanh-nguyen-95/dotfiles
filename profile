@@ -56,7 +56,9 @@ export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 
+# startup apps
 ibus-daemon -xdr
+gnome-keyring-daemon -d
 
 # keyboard repeat rate
 xset r rate 300 60
