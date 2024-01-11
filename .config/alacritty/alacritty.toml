@@ -45,7 +45,7 @@ print_events = false
 render_timer = false
 
 [font]
-size = 16.0
+size = 14.0
 
 [font.bold]
 family = "Jetbrains Mono Nerd Font"
