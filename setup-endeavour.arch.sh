@@ -82,6 +82,7 @@ sudo chmod +x ~/.config/sxhkd/sxhkdrc
 sudo chmod +x ~/.config/polybar/launch.sh
 sudo chmod +x ~/dev.sh
 sudo chmod +x ~/config.sh
+sudo chmod +x ~/dotfiles/pocketbase
 
 # Shell
 # sudo chsh -s /bin/bash
