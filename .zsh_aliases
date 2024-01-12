@@ -38,4 +38,4 @@ alias config='~/config.sh'
 # apps
 alias ngrok='~/ngrok'
 alias vpn='warp-cli'
-alias awesometest='Xephyr :5 & sleep 1 ; DISPLAY=:5 awesome'
+alias pb='~/dotfiles/pocketbase'
