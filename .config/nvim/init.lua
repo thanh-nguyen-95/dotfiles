@@ -174,7 +174,8 @@ require("lazy").setup({
       require("neo-tree").setup({
         enable_git_status = false,
         window = {
-          width = 40,
+          position = "right",
+          width = 60,
           mappings = {
             ["l"] = "open",
             ["h"] = "close_node",
@@ -186,6 +187,9 @@ require("lazy").setup({
           follow_current_file = {
             enabled = true,
           },
+          filtered_items = {
+            hide_dotfiles = false,
+          }
         },
       })
     end,
