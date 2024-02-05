@@ -435,7 +435,7 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 vim.keymap.set(
   "n",
   "<leader>pv",
-  ":Neotree filesystem left toggle<cr>", -- File Explorer
+  ":Neotree filesystem right toggle<cr>", -- File Explorer
   { silent = true, noremap = true }
 )
 vim.keymap.set(
