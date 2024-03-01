@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S bspwm sxhkd polybar rofi alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst neovim google-chrome cloudflare-warp-bin htop fd gomi ueberzug
+yay -S bspwm sxhkd polybar rofi alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst neovim google-chrome cloudflare-warp-bin htop fd ueberzug tmux
 
 echo "Installing Fast Node Manager"
 
@@ -40,6 +40,7 @@ rm -rf ~/.config/nvim
 rm -rf ~/.config/rofi
 rm -rf ~/.config/ranger
 rm -rf ~/.config/flameshot
+rm -rf ~/.config/tmux
 rm -rf ~/.config/mimeapps.list
 rm -rf ~/.gitconfig
 rm -rf ~/.zshrc
@@ -59,6 +60,7 @@ ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi
 ln -s ~/dotfiles/.config/ranger ~/.config/ranger
 ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
+ln -s ~/dotfiles/.config/tmux ~/.config/tmux
 ln -s ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.zshrc ~/.zshrc
