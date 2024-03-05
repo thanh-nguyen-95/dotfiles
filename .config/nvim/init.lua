@@ -135,21 +135,22 @@ require("lazy").setup({
         sources = {
           { name = "nvim_lsp" },
           { name = "luasnip" },
-          { name = "codeium" },
         },
       })
     end,
   },
 
   {
-    "Exafunction/codeium.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
-    },
+    'Exafunction/codeium.vim',
     config = function()
-      require("codeium").setup({})
-    end,
+      vim.g.codeium_manual = true
+      vim.keymap.set('i', '<C-.>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+      vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end,
+        { expr = true, silent = true })
+      vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end,
+        { expr = true, silent = true })
+      vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+    end
   },
 
   {
@@ -258,7 +259,7 @@ require("lazy").setup({
     name = "nvim-base16",
     priority = 1000,
     config = function()
-      vim.opt.background = "dark"                        -- set this to dark or light
+      vim.opt.background = "dark"                           -- set this to dark or light
       vim.cmd.colorscheme("base16-tomorrow-night-eighties") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
   },
