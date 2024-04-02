@@ -168,6 +168,8 @@ require("lazy").setup({
           null_ls.builtins.formatting.biome,
         },
       })
+
+      vim.keymap.set("n", "<leader>=", ":Format<cr>", { silent = true, noremap = true })
     end,
   },
 
@@ -251,7 +253,7 @@ require("lazy").setup({
     name = "nvim-base16",
     priority = 1000,
     config = function()
-      vim.opt.background = "dark"                           -- set this to dark or light
+      vim.opt.background = "dark"                        -- set this to dark or light
       vim.cmd.colorscheme("base16-tomorrow-night-eighties") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
   },
@@ -475,9 +477,7 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_next, { desc = "Go to previous dia
 vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, { desc = "Go to next diagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
-vim.keymap.set("n", "<leader>=", function()
-  vim.lsp.buf.format({ timeout_ms = 5000 })
-end, { silent = true, noremap = true, desc = "Format document with LSP" })
+
 -- Neo-Tree
 vim.keymap.set(
   "n",
@@ -524,6 +524,11 @@ local on_attach = function(_, bufnr)
   nmap("<leader>wl", function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, "[W]orkspace [L]ist Folders")
+
+  -- Create a command `:Format` local to the LSP buffer
+  vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
+    vim.lsp.buf.format({ timeout_ms = 5000 })
+  end, { desc = "Format current buffer with LSP" })
 end
 
 -- Enable the following language servers
