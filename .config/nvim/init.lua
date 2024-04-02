@@ -1,5 +1,12 @@
 --[[
 
+  -- Create a command `:Format` local to the LSP buffer
+  vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
+    vim.lsp.buf.format({ timeout_ms = 5000 })
+  end, { desc = "Format current buffer with LSP" })
+
+  vim.keymap.set("n", "<leader>=", ":Format<cr>", { silent = true, noremap = true })
+
 =====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
@@ -8,6 +15,20 @@ Kickstart.nvim is *not* a distribution.
 
 Kickstart.nvim is a template for your own configuration.
   The goal is that you can read every line of code, top-to-bottom, and understand
+
+  -- Create a command `:Format` local to the LSP buffer
+
+  -- Create a command `:Format` local to the LSP buffer
+  vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
+    vim.lsp.buf.format({ timeout_ms = 5000 })
+  end, { desc = "Format current buffer with LSP" })
+
+  vim.keymap.set("n", "<leader>=", ":Format<cr>", { silent = true, noremap = true })
+  vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
+    vim.lsp.buf.format({ timeout_ms = 5000 })
+  end, { desc = "Format current buffer with LSP" })
+
+  vim.keymap.set("n", "<leader>=", ":Format<cr>", { silent = true, noremap = true })
   what your configuration is doing.
 
   Once you've done that, you should start exploring, configuring and tinkering to
@@ -237,7 +258,7 @@ require("lazy").setup({
     name = "nvim-base16",
     priority = 1000,
     config = function()
-      vim.opt.background = "dark"                        -- set this to dark or light
+      vim.opt.background = "dark"                           -- set this to dark or light
       vim.cmd.colorscheme("base16-tomorrow-night-eighties") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
   },
@@ -461,6 +482,7 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_next, { desc = "Go to previous dia
 vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, { desc = "Go to next diagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+vim.keymap.set("n", "<leader>=", ":Format<cr>", { silent = true, noremap = true })
 
 -- Neo-Tree
 vim.keymap.set(
