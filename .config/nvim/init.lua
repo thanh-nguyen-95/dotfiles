@@ -81,9 +81,6 @@ require("lazy").setup({
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
 
-      -- Useful status updates for LSP
-      { "j-hui/fidget.nvim", opts = {} },
-
       -- Additional lua configuration, makes nvim stuff amazing!
       "folke/neodev.nvim",
     },
@@ -141,17 +138,23 @@ require("lazy").setup({
   },
 
   {
-    'Exafunction/codeium.vim',
+    "Exafunction/codeium.vim",
     config = function()
       vim.g.codeium_no_map_tab = 1
 
-      vim.keymap.set('i', '<C-\\>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
-      vim.keymap.set('i', '<C-;>', function() return vim.fn['codeium#CycleCompletions'](1) end,
-        { expr = true, silent = true })
-      vim.keymap.set('i', '<C-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end,
-        { expr = true, silent = true })
-      vim.keymap.set('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
-    end
+      vim.keymap.set("i", "<C-\\>", function()
+        return vim.fn["codeium#Accept"]()
+      end, { expr = true, silent = true })
+      vim.keymap.set("i", "<C-;>", function()
+        return vim.fn["codeium#CycleCompletions"](1)
+      end, { expr = true, silent = true })
+      vim.keymap.set("i", "<C-,>", function()
+        return vim.fn["codeium#CycleCompletions"](-1)
+      end, { expr = true, silent = true })
+      vim.keymap.set("i", "<C-x>", function()
+        return vim.fn["codeium#Clear"]()
+      end, { expr = true, silent = true })
+    end,
   },
 
   {
@@ -159,24 +162,6 @@ require("lazy").setup({
     "kylechui/nvim-surround",
     config = function()
       require("nvim-surround").setup()
-    end,
-  },
-
-  {
-    -- Formtter
-    "jose-elias-alvarez/null-ls.nvim",
-    config = function()
-      local null_ls = require("null-ls")
-
-      null_ls.setup({
-        sources = {
-          null_ls.builtins.formatting.stylua,
-          null_ls.builtins.formatting.prismaFmt,
-          null_ls.builtins.formatting.prettier,
-        },
-      })
-
-      vim.keymap.set("n", "<leader>=", ":Format<cr>", { silent = true, noremap = true })
     end,
   },
 
@@ -210,14 +195,6 @@ require("lazy").setup({
     "windwp/nvim-autopairs",
     config = function()
       require("nvim-autopairs").setup({})
-    end,
-  },
-
-  {
-    -- Auto close tag
-    "windwp/nvim-ts-autotag",
-    config = function()
-      require("nvim-ts-autotag").setup()
     end,
   },
 
@@ -260,14 +237,9 @@ require("lazy").setup({
     name = "nvim-base16",
     priority = 1000,
     config = function()
-      vim.opt.background = "dark"                           -- set this to dark or light
+      vim.opt.background = "dark"                        -- set this to dark or light
       vim.cmd.colorscheme("base16-tomorrow-night-eighties") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
-  },
-
-  {
-    -- Highlight word under cursor
-    "RRethy/vim-illuminate",
   },
 
   {
@@ -485,8 +457,8 @@ require("nvim-treesitter.configs").setup({
 })
 
 -- Diagnostic keymaps
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
+vim.keymap.set("n", "[d", vim.diagnostic.goto_next, { desc = "Go to previous diagnostic message" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, { desc = "Go to next diagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
@@ -495,12 +467,6 @@ vim.keymap.set(
   "n",
   "<leader>pv",
   ":Neotree filesystem right toggle<cr>", -- File Explorer
-  { silent = true, noremap = true }
-)
-vim.keymap.set(
-  "n",
-  "<leader>pg",
-  ":Neotree git_status right toggle<cr>", -- File Explorer
   { silent = true, noremap = true }
 )
 
@@ -560,9 +526,7 @@ local servers = {
   cssls = {},
   tailwindcss = {},
   jsonls = {},
-  svelte = {},
   prismals = {},
-  eslint = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
