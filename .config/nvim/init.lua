@@ -8,21 +8,6 @@ Kickstart.nvim is *not* a distribution.
 Kickstart.nvim is a template for your own configuration.
   The goal is that you can read every line of code, top-to-bottom, and understand
 
-  -- Create a command `:Format` local to the LSP buffer
-
-  -- Create a command `:Format` local to the LSP buffer
-  vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
-    vim.lsp.buf.format({ timeout_ms = 5000 })
-  end, { desc = "Format current buffer with LSP" })
-
-  vim.keymap.set("n", "<leader>=", ":Format<cr>", { silent = true, noremap = true })
-  vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
-    vim.lsp.buf.format({ timeout_ms = 5000 })
-  end, { desc = "Format current buffer with LSP" })
-
-  vim.keymap.set("n", "<leader>=", ":Format<cr>", { silent = true, noremap = true })
-  what your configuration is doing.
-
   Once you've done that, you should start exploring, configuring and tinkering to
   explore Neovim!
 
@@ -167,6 +152,22 @@ require("lazy").setup({
       vim.keymap.set("i", "<C-x>", function()
         return vim.fn["codeium#Clear"]()
       end, { expr = true, silent = true })
+    end,
+  },
+
+  {
+    -- Formtter
+    "nvimtools/none-ls.nvim",
+    config = function()
+      local null_ls = require("null-ls")
+
+      null_ls.setup({
+        sources = {
+          null_ls.builtins.formatting.stylua,
+          null_ls.builtins.formatting.prismaFmt,
+          null_ls.builtins.formatting.biome,
+        },
+      })
     end,
   },
 
