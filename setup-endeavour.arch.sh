@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S bspwm sxhkd polybar rofi alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship ranger pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk feh dunst neovim google-chrome cloudflare-warp-bin htop fd ueberzug zellij
+yay -S awesome bspwm sxhkd polybar rofi alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk dunst neovim google-chrome cloudflare-warp-bin htop fd zellij
 
 echo "Installing Fast Node Manager"
 
@@ -38,7 +38,6 @@ rm -rf ~/.config/sxhkd
 rm -rf ~/.config/polybar
 rm -rf ~/.config/nvim
 rm -rf ~/.config/rofi
-rm -rf ~/.config/ranger
 rm -rf ~/.config/flameshot
 rm -rf ~/.config/zellij
 rm -rf ~/.config/mimeapps.list
@@ -47,7 +46,6 @@ rm -rf ~/.zshrc
 rm -rf ~/.zsh_aliases
 rm -rf ~/.ngrok2
 rm -rf ~/ngrok
-rm -rf ~/.prettierrc
 rm -rf ~/dev.sh
 rm -rf ~/config.sh
 
@@ -58,7 +56,6 @@ ln -s ~/dotfiles/.config/sxhkd ~/.config/sxhkd
 ln -s ~/dotfiles/.config/polybar ~/.config/polybar
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi
-ln -s ~/dotfiles/.config/ranger ~/.config/ranger
 ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
 ln -s ~/dotfiles/.config/zellij ~/.config/zellij
 ln -s ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
@@ -67,7 +64,6 @@ ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 ln -s ~/dotfiles/.ngrok2 ~/.ngrok2
 ln -s ~/dotfiles/ngrok ~/ngrok
-ln -s ~/dotfiles/.prettierrc ~/.prettierrc
 ln -s ~/dotfiles/dev.sh ~/dev.sh
 ln -s ~/dotfiles/config.sh ~/config.sh
 
