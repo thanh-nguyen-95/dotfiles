@@ -213,6 +213,13 @@ require("lazy").setup({
       require("nvim-autopairs").setup({})
     end,
   },
+  {
+    -- Autotag
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup({})
+    end,
+  },
 
   {
     -- File explorer
@@ -253,8 +260,8 @@ require("lazy").setup({
     name = "nvim-base16",
     priority = 1000,
     config = function()
-      vim.opt.background = "dark"                        -- set this to dark or light
-      vim.cmd.colorscheme("base16-tomorrow-night-eighties") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
+      vim.opt.background = "dark"                  -- set this to dark or light
+      vim.cmd.colorscheme("base16-tokyo-night-storm") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
   },
 
