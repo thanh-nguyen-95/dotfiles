@@ -138,6 +138,8 @@ require("lazy").setup({
   {
     "Exafunction/codeium.vim",
     config = function()
+      -- Enable manually by running :CodeiumEnable (per buffer)
+      vim.g.codeium_enabled = false
       vim.g.codeium_no_map_tab = 1
 
       vim.keymap.set("i", "<C-\\>", function()
