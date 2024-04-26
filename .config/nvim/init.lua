@@ -263,7 +263,7 @@ require("lazy").setup({
     priority = 1000,
     config = function()
       vim.opt.background = "dark"                  -- set this to dark or light
-      vim.cmd.colorscheme("base16-tokyo-night-storm") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
+      vim.cmd.colorscheme("base16-gruvbox-dark-pale") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
   },
 
