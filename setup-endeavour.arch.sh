@@ -32,6 +32,7 @@ sudo systemctl enable --now warp-svc.service
 echo "Configuring packages"
 
 # Clean
+rm -rf ~/.config/awesome
 rm -rf ~/.config/alacritty
 rm -rf ~/.config/nvim
 rm -rf ~/.config/flameshot
@@ -43,8 +44,8 @@ rm -rf ~/dev.sh
 rm -rf ~/config.sh
 
 # Link
+ln -s ~/dotfiles/.config/awesome ~/.config/awesome
 ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
-ln -s ~/dotfiles/.config/polybar ~/.config/polybar
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
 ln -s ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
