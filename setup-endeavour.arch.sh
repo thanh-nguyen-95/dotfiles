@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S awesome bspwm sxhkd polybar rofi alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk dunst neovim google-chrome cloudflare-warp-bin htop fd zellij
+yay -S awesome alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk neovim google-chrome cloudflare-warp-bin htop fd
 
 echo "Installing Fast Node Manager"
 
@@ -32,38 +32,26 @@ sudo systemctl enable --now warp-svc.service
 echo "Configuring packages"
 
 # Clean
-rm -rf ~/.config/bspwm
+rm -rf ~/.config/awesome
 rm -rf ~/.config/alacritty
-rm -rf ~/.config/sxhkd
-rm -rf ~/.config/polybar
 rm -rf ~/.config/nvim
-rm -rf ~/.config/rofi
 rm -rf ~/.config/flameshot
-rm -rf ~/.config/zellij
 rm -rf ~/.config/mimeapps.list
 rm -rf ~/.gitconfig
 rm -rf ~/.zshrc
 rm -rf ~/.zsh_aliases
-rm -rf ~/.ngrok2
-rm -rf ~/ngrok
 rm -rf ~/dev.sh
 rm -rf ~/config.sh
 
 # Link
-ln -s ~/dotfiles/.config/bspwm ~/.config/bspwm
+ln -s ~/dotfiles/.config/awesome ~/.config/awesome
 ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
-ln -s ~/dotfiles/.config/sxhkd ~/.config/sxhkd
-ln -s ~/dotfiles/.config/polybar ~/.config/polybar
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
-ln -s ~/dotfiles/.config/rofi ~/.config/rofi
 ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
-ln -s ~/dotfiles/.config/zellij ~/.config/zellij
 ln -s ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
-ln -s ~/dotfiles/.ngrok2 ~/.ngrok2
-ln -s ~/dotfiles/ngrok ~/ngrok
 ln -s ~/dotfiles/dev.sh ~/dev.sh
 ln -s ~/dotfiles/config.sh ~/config.sh
 
@@ -75,9 +63,6 @@ sudo ln -s ~/dotfiles/profile /etc/profile
 sudo rm /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
 sudo ln -s ~/dotfiles/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
 
-sudo chmod +x ~/.config/bspwm/bspwmrc
-sudo chmod +x ~/.config/sxhkd/sxhkdrc
-sudo chmod +x ~/.config/polybar/launch.sh
 sudo chmod +x ~/dev.sh
 sudo chmod +x ~/config.sh
 
