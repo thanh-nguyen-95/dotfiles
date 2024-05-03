@@ -136,29 +136,7 @@ require("lazy").setup({
   },
 
   {
-    "Exafunction/codeium.vim",
-    config = function()
-      -- Enable manually by running :CodeiumEnable (per buffer)
-      vim.g.codeium_enabled = false
-      vim.g.codeium_no_map_tab = 1
-
-      vim.keymap.set("i", "<C-\\>", function()
-        return vim.fn["codeium#Accept"]()
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<C-;>", function()
-        return vim.fn["codeium#CycleCompletions"](1)
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<C-,>", function()
-        return vim.fn["codeium#CycleCompletions"](-1)
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<C-x>", function()
-        return vim.fn["codeium#Clear"]()
-      end, { expr = true, silent = true })
-    end,
-  },
-
-  {
-    -- Formtter
+    -- Formatter
     "nvimtools/none-ls.nvim",
     config = function()
       local null_ls = require("null-ls")
@@ -166,7 +144,6 @@ require("lazy").setup({
       null_ls.setup({
         sources = {
           null_ls.builtins.formatting.stylua,
-          null_ls.builtins.formatting.prismaFmt,
           null_ls.builtins.formatting.biome,
         },
       })
@@ -315,19 +292,6 @@ require("lazy").setup({
 
   -- Fuzzy Finder (files, lsp, etc)
   { "nvim-telescope/telescope.nvim", version = "*", dependencies = { "nvim-lua/plenary.nvim" } },
-
-  -- Fuzzy Finder Algorithm which requires local dependencies to be built.
-  -- Only load if `make` is available. Make sure you have the system
-  -- requirements installed.
-  {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    -- NOTE: If you are having trouble with this installation,
-    --       refer to the README for telescope-fzf-native for more instructions.
-    build = "make",
-    cond = function()
-      return vim.fn.executable("make") == 1
-    end,
-  },
 
   {
     -- Highlight, edit, and navigate code
