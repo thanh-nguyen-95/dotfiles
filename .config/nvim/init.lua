@@ -330,7 +330,7 @@ vim.o.wrap = false
 vim.o.swapfile = false
 vim.o.backup = false
 vim.o.scrolloff = 8
-vim.o.wrap = "nowrap"
+vim.o.wrap = false
 
 -- Set highlight on search
 vim.o.hlsearch = false
