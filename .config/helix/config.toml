@@ -1,3 +1,15 @@
+theme = "gruvbox_dark_hard"
+
+[editor]
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+
+[editor.file-picker]
+hidden = false
+
 [language-server]
 biome = { command = "biome", args = ["lsp-proxy"] }
 
