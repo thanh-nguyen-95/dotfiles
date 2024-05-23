@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S awesome alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk neovim google-chrome cloudflare-warp-bin htop fd
+yay -S awesome alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk neovim helix google-chrome cloudflare-warp-bin htop fd
 
 echo "Installing Fast Node Manager"
 
@@ -35,6 +35,7 @@ echo "Configuring packages"
 rm -rf ~/.config/awesome
 rm -rf ~/.config/alacritty
 rm -rf ~/.config/nvim
+rm -rf ~/.config/helix
 rm -rf ~/.config/flameshot
 rm -rf ~/.config/mimeapps.list
 rm -rf ~/.gitconfig
@@ -47,6 +48,7 @@ rm -rf ~/config.sh
 ln -s ~/dotfiles/.config/awesome ~/.config/awesome
 ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
+ln -s ~/dotfiles/.config/helix ~/.config/helix
 ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
 ln -s ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
