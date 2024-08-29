@@ -35,5 +35,4 @@ alias config='~/config.sh'
 # apps
 alias vpn='warp-cli'
 alias v='nvim'
-alias h='helix'
 alias shad='npx shadcn-ui@latest'
