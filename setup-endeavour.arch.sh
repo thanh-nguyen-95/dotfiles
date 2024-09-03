@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S awesome alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep postman-bin starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk neovim google-chrome cloudflare-warp-bin htop fd
+yay -S awesome alacritty xclip flameshot zsh neofetch mpv telegram-desktop ibus-bamboo docker docker-compose python-pywal fzf ripgrep starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk neovim google-chrome cloudflare-warp-bin htop fd
 
 echo "Installing Fast Node Manager"
 
@@ -35,8 +35,8 @@ echo "Configuring packages"
 rm -rf ~/.config/awesome
 rm -rf ~/.config/alacritty
 rm -rf ~/.config/nvim
-rm -rf ~/.config/flameshot
-rm -rf ~/.config/mimeapps.list
+# rm -rf ~/.config/flameshot
+# rm -rf ~/.config/mimeapps.list
 rm -rf ~/.gitconfig
 rm -rf ~/.zshrc
 rm -rf ~/.zsh_aliases
@@ -47,8 +47,8 @@ rm -rf ~/config.sh
 ln -s ~/dotfiles/.config/awesome ~/.config/awesome
 ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
-ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
-ln -s ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
+# ln -s ~/dotfiles/.config/flameshot ~/.config/flameshot
+# ln -s ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
@@ -60,8 +60,8 @@ sudo ln -s ~/dotfiles/icons/Arc /usr/share/icons/Arc
 sudo rm /etc/profile
 sudo ln -s ~/dotfiles/profile /etc/profile
 
-sudo rm /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
-sudo ln -s ~/dotfiles/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
+# sudo rm /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
+# sudo ln -s ~/dotfiles/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
 
 sudo chmod +x ~/dev.sh
 sudo chmod +x ~/config.sh

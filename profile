@@ -55,9 +55,9 @@ export XMODIFIERS=@im=ibus
 
 # startup apps
 ibus-daemon -xdr
-gnome-keyring-daemon -d
-
-# keyboard repeat rate
-xset r rate 300 60
-# screen saving
-xset dpms 600 900 1200
+# gnome-keyring-daemon -d
+#
+# # keyboard repeat rate
+# xset r rate 300 60
+# # screen saving
+# xset dpms 600 900 1200

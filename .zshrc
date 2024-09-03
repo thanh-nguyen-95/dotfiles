@@ -197,3 +197,6 @@ export EDITOR=nvim;
 # Starship
 eval "$(starship init zsh)"
 
+# Flyctl
+export FLYCTL_INSTALL="/home/tn/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
