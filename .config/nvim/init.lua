@@ -144,7 +144,8 @@ require("lazy").setup({
       null_ls.setup({
         sources = {
           null_ls.builtins.formatting.stylua,
-          null_ls.builtins.formatting.biome,
+          -- null_ls.builtins.formatting.biome,
+          null_ls.builtins.formatting.prettier,
         },
       })
 
@@ -239,7 +240,7 @@ require("lazy").setup({
     name = "nvim-base16",
     priority = 1000,
     config = function()
-      vim.opt.background = "dark"                  -- set this to dark or light
+      vim.opt.background = "dark"                     -- set this to dark or light
       vim.cmd.colorscheme("base16-gruvbox-dark-pale") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
   },
