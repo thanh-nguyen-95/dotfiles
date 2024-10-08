@@ -85,57 +85,6 @@ require("lazy").setup({
   },
 
   {
-    -- Autocompletion
-    "hrsh7th/nvim-cmp",
-    dependencies = { "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip" },
-    config = function()
-      local cmp = require("cmp")
-      local luasnip = require("luasnip")
-
-      luasnip.config.setup({})
-
-      cmp.setup({
-        snippet = {
-          expand = function(args)
-            luasnip.lsp_expand(args.body)
-          end,
-        },
-        mapping = cmp.mapping.preset.insert({
-          ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-          ["<C-f>"] = cmp.mapping.scroll_docs(4),
-          ["<C-Space>"] = cmp.mapping.complete({}),
-          ["<CR>"] = cmp.mapping.confirm({
-            behavior = cmp.ConfirmBehavior.Replace,
-            select = true,
-          }),
-          ["<Tab>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-              cmp.select_next_item()
-            elseif luasnip.expand_or_jumpable() then
-              luasnip.expand_or_jump()
-            else
-              fallback()
-            end
-          end, { "i", "s" }),
-          ["<S-Tab>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-              cmp.select_prev_item()
-            elseif luasnip.jumpable(-1) then
-              luasnip.jump(-1)
-            else
-              fallback()
-            end
-          end, { "i", "s" }),
-        }),
-        sources = {
-          { name = "nvim_lsp" },
-          { name = "luasnip" },
-        },
-      })
-    end,
-  },
-
-  {
     -- Formatter
     "nvimtools/none-ls.nvim",
     config = function()
@@ -240,7 +189,7 @@ require("lazy").setup({
     name = "nvim-base16",
     priority = 1000,
     config = function()
-      vim.opt.background = "dark"                     -- set this to dark or light
+      vim.opt.background = "dark"                  -- set this to dark or light
       vim.cmd.colorscheme("base16-gruvbox-dark-pale") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
   },
@@ -299,6 +248,64 @@ require("lazy").setup({
     "nvim-treesitter/nvim-treesitter",
     config = function()
       pcall(require("nvim-treesitter.install").update({ with_sync = true }))
+    end,
+  },
+
+  -- Supermaven AI
+  {
+    "supermaven-inc/supermaven-nvim",
+    config = function()
+      require("supermaven-nvim").setup({})
+    end,
+  },
+  {
+    -- Autocompletion
+    "hrsh7th/nvim-cmp",
+    dependencies = { "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip" },
+    config = function()
+      local cmp = require("cmp")
+      local luasnip = require("luasnip")
+
+      luasnip.config.setup({})
+
+      cmp.setup({
+        snippet = {
+          expand = function(args)
+            luasnip.lsp_expand(args.body)
+          end,
+        },
+        mapping = cmp.mapping.preset.insert({
+          ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+          ["<C-f>"] = cmp.mapping.scroll_docs(4),
+          ["<C-Space>"] = cmp.mapping.complete({}),
+          ["<CR>"] = cmp.mapping.confirm({
+            behavior = cmp.ConfirmBehavior.Replace,
+            select = true,
+          }),
+          ["<Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_next_item()
+            elseif luasnip.expand_or_jumpable() then
+              luasnip.expand_or_jump()
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+          ["<S-Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_prev_item()
+            elseif luasnip.jumpable(-1) then
+              luasnip.jump(-1)
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+        }),
+        sources = {
+          { name = "nvim_lsp" },
+          { name = "luasnip" },
+        },
+      })
     end,
   },
 
