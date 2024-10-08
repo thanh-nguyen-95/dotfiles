@@ -255,7 +255,10 @@ require("lazy").setup({
   {
     "supermaven-inc/supermaven-nvim",
     config = function()
-      require("supermaven-nvim").setup({})
+      require("supermaven-nvim").setup({
+        disable_inline_completion = false,
+        disable_keymaps = false,
+      })
     end,
   },
   {
@@ -303,6 +306,7 @@ require("lazy").setup({
         }),
         sources = {
           { name = "nvim_lsp" },
+          { name = "supermaven" },
           { name = "luasnip" },
         },
       })
