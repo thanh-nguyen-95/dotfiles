@@ -256,8 +256,8 @@ require("lazy").setup({
     "supermaven-inc/supermaven-nvim",
     config = function()
       require("supermaven-nvim").setup({
-        disable_inline_completion = false,
-        disable_keymaps = false,
+        disable_inline_completion = true,
+        disable_keymaps = true,
       })
     end,
   },
@@ -441,7 +441,7 @@ vim.keymap.set("n", "<leader>pd", require("telescope.builtin").diagnostics, { de
 -- See `:help nvim-treesitter`
 require("nvim-treesitter.configs").setup({
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { "tsx", "typescript", "vim", "prisma", "css", "html", "json", "dockerfile" },
+  ensure_installed = { "tsx", "typescript", "prisma", "css", "html", "json", "dockerfile", "astro" },
   sync_install = false,
   modules = {},
   ignore_install = {},
@@ -522,11 +522,9 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-  html = {},
-  cssls = {},
-  jsonls = {},
   ts_ls = {},
   tailwindcss = {},
+  astro = {},
   prismals = {},
   dockerls = {},
   docker_compose_language_service = {},
