@@ -616,6 +616,7 @@ require("lazy").setup({
 			--  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+			local nvim_lsp = require("lspconfig")
 			local servers = {
 				-- See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
@@ -626,7 +627,13 @@ require("lazy").setup({
 				-- ts_ls = {},
 				--
 
-				ts_ls = {}, -- TypeScript
+				ts_ls = {
+					root_dir = nvim_lsp.util.root_pattern("package.json"),
+					single_file_support = false,
+				}, -- TypeScript
+				denols = {
+					root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
+				}, -- Deno
 				tailwindcss = {}, -- TailwindCSS
 				astro = {
 					init_options = {
