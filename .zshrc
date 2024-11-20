@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/tn/.zsh/completions:"* ]]; then export FPATH="/home/tn/.zsh/completions:$FPATH"; fi
 if [[ $- != *i* ]]; then
 	return
 fi
@@ -200,3 +202,7 @@ eval "$(starship init zsh)"
 # Flyctl
 export FLYCTL_INSTALL="/home/tn/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
+. "/home/tn/.deno/env"
+# Initialize zsh completions (added by deno install script)
+autoload -Uz compinit
+compinit
