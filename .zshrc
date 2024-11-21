@@ -202,7 +202,9 @@ eval "$(starship init zsh)"
 # Flyctl
 export FLYCTL_INSTALL="/home/tn/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
-. "/home/tn/.deno/env"
-# Initialize zsh completions (added by deno install script)
-autoload -Uz compinit
-compinit
+# bun completions
+[ -s "/home/tn/.bun/_bun" ] && source "/home/tn/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
