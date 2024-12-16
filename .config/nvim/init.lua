@@ -863,6 +863,9 @@ require("lazy").setup({
 				}),
 				sources = {
 					{
+						name = "supermaven",
+					},
+					{
 						name = "lazydev",
 						-- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
 						group_index = 0,
@@ -871,6 +874,17 @@ require("lazy").setup({
 					{ name = "luasnip" },
 					{ name = "path" },
 				},
+			})
+		end,
+	},
+
+	{
+		"supermaven-inc/supermaven-nvim",
+		config = function()
+			require("supermaven-nvim").setup({
+				log_level = "info", -- set to "off" to disable logging completely
+				disable_inline_completion = true, -- disables inline completion for use with cmp
+				disable_keymaps = true, -- disables built in keymaps for more manual control
 			})
 		end,
 	},
