@@ -194,8 +194,6 @@ vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 --  See `:help wincmd` for a list of all window commands
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -463,10 +461,10 @@ require("lazy").setup({
 				harpoon.ui:toggle_quick_menu(harpoon:list())
 			end)
 
-			vim.keymap.set("n", "<C-h>", function()
+			vim.keymap.set("n", "<C-j>", function()
 				harpoon:list():select(1)
 			end)
-			vim.keymap.set("n", "<C-t>", function()
+			vim.keymap.set("n", "<C-k>", function()
 				harpoon:list():select(2)
 			end)
 			vim.keymap.set("n", "<C-n>", function()
@@ -863,9 +861,6 @@ require("lazy").setup({
 				}),
 				sources = {
 					{
-						name = "supermaven",
-					},
-					{
 						name = "lazydev",
 						-- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
 						group_index = 0,
@@ -883,8 +878,12 @@ require("lazy").setup({
 		config = function()
 			require("supermaven-nvim").setup({
 				log_level = "info", -- set to "off" to disable logging completely
-				disable_inline_completion = true, -- disables inline completion for use with cmp
-				disable_keymaps = true, -- disables built in keymaps for more manual control
+				disable_inline_completion = false, -- disables inline completion for use with cmp
+				keymaps = {
+					accept_suggestion = "<C-;>",
+					clear_suggestion = "<C-]>",
+					accept_word = "<C-'>",
+				},
 			})
 		end,
 	},
