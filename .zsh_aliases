@@ -36,3 +36,5 @@ alias config='~/config.sh'
 alias vpn='warp-cli'
 alias v='nvim'
 alias shad='npx shadcn-ui@latest'
+# docker
+alias dpsa='docker ps -a --format "[{{.State}}] {{.Names}} ({{.Image}}) on {{.Ports}}\n"'
