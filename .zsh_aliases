@@ -32,9 +32,18 @@ alias gt='git tag'
 alias gpt='git push --tags origin'
 alias dev='~/dev.sh'
 alias config='~/config.sh'
+alias aa='~/session.sh'
 # apps
 alias vpn='warp-cli'
 alias v='nvim'
 alias shad='npx shadcn-ui@latest'
 # docker
 alias dpsa='docker ps -a --format "[{{.State}}] {{.Names}} ({{.Image}}) on {{.Ports}}\n"'
+# zellij
+alias z='zellij'
+alias za='zellij attach -c'
+alias zaf='zellij attach -c -f'
+alias zls='zellij ls'
+alias zds='zellij delete-session'
+alias zdas='zellij delete-all-sessions'
+

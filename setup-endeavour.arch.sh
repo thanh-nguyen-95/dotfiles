@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S hyprland hyprpaper hyprpolkitagent hyprshot hyprlock hypridle swaync xdg-desktop-portal-hyprland waybar wofi zsh neofetch mpv telegram-desktop docker docker-compose fzf ripgrep starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk neovim google-chrome htop fd
+yay -S hyprland hyprpaper hyprpolkitagent hyprshot hyprlock hypridle swaync xdg-desktop-portal-hyprland waybar wofi zsh neofetch mpv telegram-desktop docker docker-compose fzf ripgrep starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk neovim google-chrome htop fd zellij
 
 echo "Installing Fast Node Manager"
 
@@ -39,6 +39,7 @@ rm -rf ~/.zshrc
 rm -rf ~/.zsh_aliases
 rm -rf ~/dev.sh
 rm -rf ~/config.sh
+rm -rf ~/session.sh
 
 # Link
 ln -s ~/dotfiles/.config/hypr ~/.config/hypr
@@ -51,9 +52,11 @@ ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 ln -s ~/dotfiles/dev.sh ~/dev.sh
 ln -s ~/dotfiles/config.sh ~/config.sh
+ln -s ~/dotfiles/session.sh ~/session.sh
 
 sudo chmod +x ~/dev.sh
 sudo chmod +x ~/config.sh
+sudo chmod +x ~/session.sh
 
 # Shell
 sudo chsh -s /bin/zsh
