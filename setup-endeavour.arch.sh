@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S hyprland hyprpaper hyprpolkitagent hyprshot hyprlock hypridle swaync xdg-desktop-portal-hyprland waybar wofi zsh neofetch mpv telegram-desktop docker docker-compose fzf ripgrep starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk neovim google-chrome htop fd zellij
+yay -S hyprland hyprpaper hyprpolkitagent hyprshot hyprlock hypridle swaync xdg-desktop-portal-hyprland waybar wofi zsh neofetch mpv telegram-desktop docker docker-compose fzf ripgrep starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk neovim google-chrome htop fd zellij fcitx5 fcitx5-unikey fcitx5-configtool
 
 echo "Installing Fast Node Manager"
 
@@ -34,6 +34,8 @@ rm -rf ~/.config/kitty
 rm -rf ~/.config/waybar
 rm -rf ~/.config/wofi
 rm -rf ~/.config/nvim
+rm -rf ~/.config/fcitx5
+rm -rf ~/.config/zellij
 rm -rf ~/.gitconfig
 rm -rf ~/.zshrc
 rm -rf ~/.zsh_aliases
@@ -47,6 +49,8 @@ ln -s ~/dotfiles/.config/kitty ~/.config/kitty
 ln -s ~/dotfiles/.config/waybar ~/.config/waybar
 ln -s ~/dotfiles/.config/wofi ~/.config/wofi
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
+ln -s ~/dotfiles/.config/fcitx5 ~/.config/fcitx5
+ln -s ~/dotfiles/.config/zellij ~/.config/zellij
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases

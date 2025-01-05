@@ -185,9 +185,6 @@ compinit -u -d "$compfile"
 # FZF config to ignore files/folders
 # export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,.next/*,.docusaurus/*}"'
 
-# Pywal
-(cat /home/tn/.cache/wal/sequences &)
-
 # fnm
 export PATH="/home/tn/.local/share/fnm:$PATH"
 eval "`fnm env`"
@@ -208,6 +205,3 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/tn/.cache/lm-studio/bin"
