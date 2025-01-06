@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S hyprland hyprpaper hyprpolkitagent hyprshot hyprlock hypridle swaync xdg-desktop-portal-hyprland waybar wofi zsh neofetch mpv telegram-desktop docker docker-compose fzf ripgrep starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk neovim google-chrome htop fd zellij fcitx5 fcitx5-unikey fcitx5-configtool kitty
+yay -S hyprland hyprpaper hyprpolkitagent hyprshot hyprlock hypridle swaync xdg-desktop-portal-hyprland waybar wofi zsh neofetch mpv telegram-desktop docker docker-compose fzf ripgrep starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk neovim google-chrome htop fd zellij fcitx5 fcitx5-unikey fcitx5-configtool kitty ttf-font-awesome
 
 echo "Installing Fast Node Manager"
 
