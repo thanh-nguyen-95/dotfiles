@@ -16,6 +16,12 @@ echo "Installing Fast Node Manager"
 
 curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
 
+echo "Installing Bun"
+curl -fsSL https://bun.sh/install | bash
+
+echo "Installing Flyctl CLI"
+curl -L https://fly.io/install.sh | sh
+
 # Docker
 # Note: must logout to take effect
 sudo groupadd docker
@@ -36,6 +42,7 @@ rm -rf ~/.config/wofi
 rm -rf ~/.config/nvim
 rm -rf ~/.config/fcitx5
 rm -rf ~/.config/zellij
+rm -rf ~/.config/mimeapps.list
 rm -rf ~/.gitconfig
 rm -rf ~/.zshrc
 rm -rf ~/.zsh_aliases
@@ -51,6 +58,7 @@ ln -s ~/dotfiles/.config/wofi ~/.config/wofi
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 ln -s ~/dotfiles/.config/fcitx5 ~/.config/fcitx5
 ln -s ~/dotfiles/.config/zellij ~/.config/zellij
+ln -s ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
