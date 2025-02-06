@@ -98,6 +98,8 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+-- Enable highlight in tmux or other multiplexers
+vim.opt.termguicolors = true
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
@@ -880,7 +882,7 @@ require("lazy").setup({
 				log_level = "info", -- set to "off" to disable logging completely
 				disable_inline_completion = false, -- disables inline completion for use with cmp
 				keymaps = {
-					accept_suggestion = "<C-;>",
+					accept_suggestion = "<C-\\>",
 					clear_suggestion = "<C-]>",
 					accept_word = "<C-'>",
 				},
