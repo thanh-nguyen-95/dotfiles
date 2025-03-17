@@ -42,6 +42,7 @@ rm -rf ~/.config/wofi
 rm -rf ~/.config/nvim
 rm -rf ~/.config/fcitx5
 rm -rf ~/.config/zellij
+rm -rf ~/.config/neofetch
 rm -rf ~/.config/mimeapps.list
 rm -rf ~/.gitconfig
 rm -rf ~/.zshrc
@@ -58,6 +59,7 @@ ln -s ~/dotfiles/.config/wofi ~/.config/wofi
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 ln -s ~/dotfiles/.config/fcitx5 ~/.config/fcitx5
 ln -s ~/dotfiles/.config/zellij ~/.config/zellij
+ln -s ~/dotfiles/.config/neofetch ~/.config/neofetch
 ln -s ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.zshrc ~/.zshrc
