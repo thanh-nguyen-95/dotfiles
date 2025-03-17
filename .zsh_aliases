@@ -36,7 +36,6 @@ alias zz='~/session.sh'
 # apps
 alias vpn='warp-cli'
 alias v='nvim'
-alias shad='npx shadcn-ui@latest'
 # docker
 alias dpsa='docker ps -a --format "[{{.State}}] {{.Names}} ({{.Image}}) on {{.Ports}}\n"'
 # zellij
@@ -45,4 +44,5 @@ alias za='zellij attach -c'
 alias zaf='zellij attach -c -f'
 alias zls='zellij ls'
 alias zds='zellij delete-session'
+alias zdsf='zellij delete-session --force'
 alias zdas='zellij delete-all-sessions'
