@@ -8,9 +8,9 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
+        "tray"
     ],
     "modules-center": [
-        "tray",
     ],
     "modules-right": [
         "pulseaudio",
@@ -19,9 +19,9 @@
         "memory",
         "temperature",
         "backlight",
-        "keyboard-state",
+        //"keyboard-state",
         "battery",
-        "battery#bat2",
+        "battery#bat1",
         "clock",
     ],
     "keyboard-state": {
@@ -63,6 +63,7 @@
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
+        "bat": "BAT0",
         "states": {
             // "good": 95,
             "warning": 30,
@@ -77,8 +78,21 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
+    "battery#bat1": {
+        "bat": "BAT1",
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
