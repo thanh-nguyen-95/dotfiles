@@ -731,32 +731,21 @@ require("lazy").setup({
 	},
 
 	{ -- Autoformat
-		"stevearc/conform.nvim",
-		cmd = { "ConformInfo" },
-		keys = {
-			{
-				"<leader>f",
-				function()
-					require("conform").format({ async = true, lsp_format = "fallback" })
-				end,
-				mode = "",
-				desc = "[F]ormat buffer",
-			},
-		},
-		opts = {
-			notify_on_error = false,
-			formatters_by_ft = {
-				lua = { "stylua" },
-				-- Conform can also run multiple formatters sequentially
-				-- python = { "isort", "black" },
-				--
-				-- You can use 'stop_after_first' to run the first available formatter from the list
-				javascript = { "prettierd", "prettier", stop_after_first = true },
-				typescript = { "prettierd", "prettier", stop_after_first = true },
-				tsx = { "prettierd", "prettier", stop_after_first = true },
-				astro = { "prettierd", "prettier", stop_after_first = true },
-			},
-		},
+		"nvimtools/none-ls.nvim",
+		config = function()
+			local null_ls = require("null-ls")
+
+			null_ls.setup({
+				sources = {
+					null_ls.builtins.formatting.stylua,
+					null_ls.builtins.formatting.prettier,
+				},
+			})
+
+			vim.keymap.set("n", "<leader>f", function()
+				vim.lsp.buf.format({ async = true })
+			end)
+		end,
 	},
 
 	{ -- Autocompletion
@@ -875,7 +864,7 @@ require("lazy").setup({
 		end,
 	},
 
-	{
+	{ -- Supermaven.nvim | AI Code Completion
 		"supermaven-inc/supermaven-nvim",
 		config = function()
 			require("supermaven-nvim").setup({
@@ -1083,9 +1072,9 @@ require("lazy").setup({
 			{ "\\", ":Neotree reveal<CR>", desc = "NeoTree reveal", silent = true },
 		},
 		opts = {
-      window = {
-        position = "right",
-      },
+			window = {
+				position = "right",
+			},
 			filesystem = {
 				window = {
 					mappings = {
