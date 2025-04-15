@@ -46,3 +46,5 @@ alias zls='zellij ls'
 alias zds='zellij delete-session'
 alias zdsf='zellij delete-session --force'
 alias zdas='zellij delete-all-sessions'
+# shadcn/ui
+alias shad='bunx --bun shadcn@latest add'
