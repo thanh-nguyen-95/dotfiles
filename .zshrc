@@ -182,9 +182,6 @@ ttyctl -f
 # initialize completion
 compinit -u -d "$compfile"
 
-# FZF config to ignore files/folders
-# export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,.next/*,.docusaurus/*}"'
-
 # fnm
 export PATH="/home/tn/.local/share/fnm:$PATH"
 eval "`fnm env`"

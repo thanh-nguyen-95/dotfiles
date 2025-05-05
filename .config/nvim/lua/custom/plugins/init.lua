@@ -3,7 +3,7 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  -- Git integration
+	-- Git integration
 	"tpope/vim-fugitive",
 
 	-- Global bookmarks
@@ -52,7 +52,7 @@ return {
 		"supermaven-inc/supermaven-nvim",
 		config = function()
 			require("supermaven-nvim").setup({
-				log_level = "info", -- set to "off" to disable logging completely
+				log_level = "info",            -- set to "off" to disable logging completely
 				disable_inline_completion = false, -- disables inline completion for use with cmp
 				keymaps = {
 					accept_suggestion = "<C-\\>",
@@ -84,7 +84,7 @@ return {
 	{
 		"windwp/nvim-ts-autotag",
 		config = function()
-			require("nvim-ts-autotag").setup({})
+			require("nvim-ts-autotag").setup()
 		end,
 	},
 
