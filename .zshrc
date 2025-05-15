@@ -196,12 +196,12 @@ eval "$(starship init zsh)"
 # Flyctl
 export FLYCTL_INSTALL="/home/tn/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
-# bun completions
-[ -s "/home/tn/.bun/_bun" ] && source "/home/tn/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+# bun completions
+[ -s "/home/tn/.bun/_bun" ] && source "/home/tn/.bun/_bun"
 
 # Turso
 export PATH="$PATH:/home/tn/.turso"

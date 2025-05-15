@@ -93,9 +93,6 @@ vim.g.maplocalleader = " "
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
--- Enable true colors
-vim.g.termguicolors = true
-
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -879,7 +876,7 @@ require("lazy").setup({
     "RRethy/nvim-base16",
     priority = 1000,
     init = function()
-      vim.cmd.colorscheme("base16-gruvbox-dark") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
+      vim.cmd.colorscheme("base16-solarized-light") -- https://github.com/RRethy/nvim-base16#builtin-colorschemes
     end,
   },
 
