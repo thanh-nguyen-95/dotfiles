@@ -10,7 +10,7 @@ fi
 
 echo "Has yay, start installing packages"
 
-yay -S hyprland hyprpaper hyprpolkitagent hyprshot hyprlock hypridle swaync xdg-desktop-portal-hyprland waybar wofi zsh neofetch mpv telegram-desktop docker docker-compose fzf ripgrep starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk neovim google-chrome htop fd zellij fcitx5 fcitx5-unikey fcitx5-configtool kitty ttf-font-awesome
+yay -S hyprland hyprpaper hyprpolkitagent hyprshot hyprlock hypridle swaync xdg-desktop-portal-hyprland waybar wofi zsh neofetch mpv telegram-desktop docker docker-compose fzf ripgrep starship pamixer brightnessctl noto-fonts noto-fonts-emoji noto-fonts-cjk neovim google-chrome htop fd zellij fcitx5 fcitx5-unikey fcitx5-configtool ghostty ttf-font-awesome
 
 echo "Installing Fast Node Manager"
 
@@ -36,7 +36,7 @@ echo "Configuring packages"
 
 # Clean
 rm -rf ~/.config/hypr
-rm -rf ~/.config/kitty
+rm -rf ~/.config/ghostty
 rm -rf ~/.config/waybar
 rm -rf ~/.config/wofi
 rm -rf ~/.config/nvim
@@ -53,7 +53,7 @@ rm -rf ~/session.sh
 
 # Link
 ln -s ~/dotfiles/.config/hypr ~/.config/hypr
-ln -s ~/dotfiles/.config/kitty ~/.config/kitty
+ln -s ~/dotfiles/.config/ghostty ~/.config/ghostty
 ln -s ~/dotfiles/.config/waybar ~/.config/waybar
 ln -s ~/dotfiles/.config/wofi ~/.config/wofi
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
