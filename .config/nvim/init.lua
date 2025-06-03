@@ -694,9 +694,22 @@ require("lazy").setup({
         ts_ls = {},   -- TypeScript
         tailwindcss = {}, -- TailwindCSS
         astro = {
-          init_options = {
-            ts_ls = {},
-          },
+          on_attach = function(client)
+            vim.api.nvim_create_autocmd("BufWritePost", {
+              pattern = { "*.js", "*.ts" },
+              group = vim.api.nvim_create_augroup("astro_ondidchangetsorjsfile", { clear = true }),
+              callback = function(ctx)
+                client.notify("workspace/didChangeWatchedFiles", {
+                  changes = {
+                    {
+                      uri = ctx.match,
+                      type = 2, -- 1 = Created, 2 = Changed, 3 = Deleted
+                    },
+                  },
+                })
+              end,
+            })
+          end,
         },                                -- Astro
         prismals = {},                    -- Prisma
         dockerls = {},                    -- Dockerfile
