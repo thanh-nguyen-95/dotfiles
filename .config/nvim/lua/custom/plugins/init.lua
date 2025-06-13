@@ -52,7 +52,7 @@ return {
 		"supermaven-inc/supermaven-nvim",
 		config = function()
 			require("supermaven-nvim").setup({
-				log_level = "info",            -- set to "off" to disable logging completely
+				log_level = "info", -- set to "off" to disable logging completely
 				disable_inline_completion = false, -- disables inline completion for use with cmp
 				keymaps = {
 					accept_suggestion = "<C-\\>",
@@ -73,9 +73,9 @@ return {
 		config = function()
 			require("nvim-autopairs").setup({})
 			-- If you want to automatically add `(` after selecting a function or method
-			local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-			local cmp = require("cmp")
-			cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+			-- local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+			-- local cmp = require("cmp")
+			-- cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 		end,
 	},
 
