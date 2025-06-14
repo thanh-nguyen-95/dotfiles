@@ -5,3 +5,4 @@ font-size = 14
 window-padding-x = 2
 window-padding-y = 2
 confirm-close-surface = false
+window-decoration = none
