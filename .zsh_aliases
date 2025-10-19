@@ -36,7 +36,7 @@ alias zz='~/session.sh'
 # apps
 alias vpn='warp-cli'
 alias v='nvim'
-alias m='NVIM_APPNAME=nvim-mini nvim'
+alias n='nvim'
 # docker
 alias dpsa='docker ps -a --format "[{{.State}}] {{.Names}} ({{.Image}}) on {{.Ports}}\n"'
 # zellij
