@@ -194,5 +194,3 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # bun completions
 [ -s "/home/tn/.bun/_bun" ] && source "/home/tn/.bun/_bun"
-
-(cat ~/.cache/wal/sequences &)
