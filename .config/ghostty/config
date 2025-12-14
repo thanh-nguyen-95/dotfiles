@@ -1,7 +1,8 @@
-background-opacity = 0.9
-background-blur = true
 font-size = 14
-window-padding-x = 2
-window-padding-y = 2
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = false
+window-padding-color = background
 confirm-close-surface = false
 window-decoration = none
+theme = Monokai Pro Light Sun
