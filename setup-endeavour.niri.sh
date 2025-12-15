@@ -34,7 +34,6 @@ echo "Configuring packages"
 rm -rf ~/.config/niri
 rm -rf ~/.config/ghostty
 rm -rf ~/.config/nvim
-rm -rf ~/.config/fcitx5
 rm -rf ~/.config/zellij
 rm -rf ~/.config/neofetch
 rm -rf ~/.config/mimeapps.list
@@ -48,7 +47,6 @@ rm -rf ~/config.sh
 ln -s ~/dotfiles/.config/niri ~/.config/niri
 ln -s ~/dotfiles/.config/ghostty ~/.config/ghostty
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
-ln -s ~/dotfiles/.config/fcitx5 ~/.config/fcitx5
 ln -s ~/dotfiles/.config/zellij ~/.config/zellij
 ln -s ~/dotfiles/.config/neofetch ~/.config/neofetch
 ln -s ~/dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
