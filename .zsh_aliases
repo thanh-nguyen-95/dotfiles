@@ -48,3 +48,5 @@ alias zdsf='zellij delete-session --force'
 alias zdas='zellij delete-all-sessions'
 # taskwarrior-tui
 alias tw='taskwarrior-tui'
+# shadcn/ui
+alias shad='bunx --bun shadcn@latest'
