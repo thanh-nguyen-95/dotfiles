@@ -5,4 +5,4 @@ window-padding-balance = false
 window-padding-color = background
 confirm-close-surface = false
 window-decoration = none
-theme = Monokai Pro Light Sun
+theme = noctalia
