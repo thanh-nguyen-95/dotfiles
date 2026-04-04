@@ -4,5 +4,4 @@ window-padding-y = 0
 window-padding-balance = false
 window-padding-color = background
 confirm-close-surface = false
-window-decoration = none
-theme = noctalia
+#window-decoration = none
