@@ -2,15 +2,14 @@
 # ================================
 echo "Welcome to Stupid Installing Script (SIS)"
 
-if ! command -v paru &> /dev/null
-then
+if ! command -v paru &>/dev/null; then
   echo "Cannot find command 'paru'. Exit!"
   exit
 fi
 
 echo "Has yay, start installing packages"
 
-paru -S docker docker-compose fzf ripgrep neovim fd zellij ibus-bamboo ttf-font-awesome ttf-jetbrains-mono-nerd wl-clipboard brave-bin
+paru -S docker docker-compose fzf ripgrep neovim fd zellij ibus-bamboo ttf-font-awesome ttf-jetbrains-mono-nerd wl-clipboard helium-browser-bin
 
 echo "Installing Fast Node Manager"
 
@@ -32,13 +31,15 @@ sudo systemctl enable --now docker.socket
 echo "Configuring packages"
 
 # Clean
-rm -rf ~/.config/nvim
+rm -rf ~/.config/fish
 rm -rf ~/.config/zellij
+rm -rf ~/.config/nvim
 rm -rf ~/.gitconfig
 rm -rf ~/dev.sh
 rm -rf ~/config.sh
 
 # Link
+ln -s ~/dotfiles/.config/fish ~/.config/fish
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 ln -s ~/dotfiles/.config/zellij ~/.config/zellij
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
