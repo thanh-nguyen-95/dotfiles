@@ -9,7 +9,7 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
-alias ls='' # preferred listing
+
 alias gba='git branch -a'
 alias gbm='git branch -m'
 alias gbd='git branch -d'
@@ -45,3 +45,6 @@ alias zdsf='zellij delete-session --force'
 alias zdas='zellij delete-all-sessions'
 # shadcn/ui
 alias shad='bunx --bun shadcn@latest'
+
+# opencode
+fish_add_path /home/tn/.opencode/bin
