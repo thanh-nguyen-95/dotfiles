@@ -2,9 +2,8 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 # overwrite greeting
 # potentially disabling fastfetch
-#function fish_greeting
-#    # smth smth
-#end
+function fish_greeting
+end
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
@@ -48,3 +47,4 @@ alias shad='bunx --bun shadcn@latest'
 
 # opencode
 fish_add_path /home/tn/.opencode/bin
+alias oc='opencode'
