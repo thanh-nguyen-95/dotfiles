@@ -7,9 +7,9 @@ if ! command -v paru &>/dev/null; then
   exit
 fi
 
-echo "Has yay, start installing packages"
+echo "Has paru, start installing packages"
 
-paru -S docker docker-compose fzf ripgrep neovim fd zellij ibus-bamboo ttf-font-awesome ttf-jetbrains-mono-nerd wl-clipboard helium-browser-bin
+paru -S docker docker-compose fzf ripgrep neovim fd lazygit flameshot zellij ibus-bamboo ttf-font-awesome ttf-jetbrains-mono-nerd wl-clipboard helium-browser-bin opencode tree-sitter-cli
 
 echo "Installing Fast Node Manager"
 
