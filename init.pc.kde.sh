@@ -9,7 +9,7 @@ fi
 
 echo "Has paru, start installing packages"
 
-paru -S docker docker-compose neovim lazygit zellij wl-clipboard helium-browser-bin opencode tree-sitter-cli github-cli qbittorrent telegram-desktop
+paru -S docker docker-compose neovim lazygit zellij wl-clipboard helium-browser-bin opencode tree-sitter-cli github-cli qbittorrent telegram-desktop tailscale
 
 echo "Installing Fast Node Manager"
 
@@ -24,6 +24,9 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl enable --now docker.service
 sudo systemctl enable --now docker.socket
+
+# Tailscale
+sudo systemctl enable --now tailscaled.service
 
 # CONFIG
 # ================================
