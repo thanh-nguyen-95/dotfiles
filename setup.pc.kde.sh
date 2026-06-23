@@ -9,7 +9,7 @@ fi
 
 echo "Has paru, start installing packages"
 
-paru -S docker docker-compose fzf ripgrep neovim fd lazygit flameshot zellij ibus-bamboo ttf-font-awesome ttf-jetbrains-mono-nerd wl-clipboard helium-browser-bin opencode tree-sitter-cli
+paru -S docker docker-compose neovim lazygit zellij ibus-bamboo wl-clipboard helium-browser-bin opencode tree-sitter-cli
 
 echo "Installing Fast Node Manager"
 
