@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Restore HDMI-A-1 to its native 4K@120 + scale=2 after a stream ends.
+set -euo pipefail
+
+OUTPUT="${SUNSHINE_OUTPUT:-HDMI-A-1}"
+MODE="${SUNSHINE_DESKTOP_MODE:-3840x2160@120}"
+SCALE="${SUNSHINE_DESKTOP_SCALE:-2}"
+
+exec kscreen-doctor "output.${OUTPUT}.mode.${MODE}" "output.${OUTPUT}.scale.${SCALE}"
