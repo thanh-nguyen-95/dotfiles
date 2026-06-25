@@ -9,7 +9,7 @@ fi
 
 echo "Has paru, start installing packages"
 
-paru -S docker docker-compose neovim lazygit zellij wl-clipboard helium-browser-bin opencode tree-sitter-cli github-cli qbittorrent telegram-desktop tailscale
+paru -S docker docker-compose neovim lazygit zellij wl-clipboard helium-browser-bin opencode tree-sitter-cli github-cli qbittorrent telegram-desktop tailscale fcitx5 fcitx5-unikey fcitx5-gtk fcitx5-qt fcitx5-configtool
 
 echo "Installing Fast Node Manager"
 
@@ -27,6 +27,10 @@ sudo systemctl enable --now docker.socket
 
 # Tailscale
 sudo systemctl enable --now tailscaled.service
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+sudo systemctl restart systemd-resolved
+sudo systemctl restart NetworkManager
+sudo systemctl restart tailscaled
 
 # CONFIG
 # ================================
