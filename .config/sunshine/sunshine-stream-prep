@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Switch HDMI-A-1 to 1080p native (scale=1) so KMS capture matches the
+# stream resolution. Pairs with sunshine-stream-undo.
+set -euo pipefail
+
+OUTPUT="${SUNSHINE_OUTPUT:-HDMI-A-1}"
+MODE="${SUNSHINE_STREAM_MODE:-1920x1080@120}"
+SCALE="${SUNSHINE_STREAM_SCALE:-1}"
+
+kscreen-doctor "output.${OUTPUT}.mode.${MODE}" "output.${OUTPUT}.scale.${SCALE}"
+
+# Block until the new mode is the live one, so Sunshine's encoder
+# doesn't init against the stale 4K buffer.
+want_w="${MODE%x*}"
+want_h="${MODE#*x}"; want_h="${want_h%@*}"
+for _ in $(seq 1 40); do
+  read -r have_w have_h < <(
+    kscreen-doctor -j 2>/dev/null | python3 -c "
+import json, sys
+data = json.load(sys.stdin)
+out = next((o for o in data['outputs'] if o['name'] == '${OUTPUT}'), None)
+if not out: sys.exit(1)
+mode = next((m for m in out['modes'] if m['id'] == out['currentModeId']), None)
+if not mode: sys.exit(1)
+print(mode['size']['width'], mode['size']['height'])
+" 2>/dev/null
+  ) || true
+  [[ "${have_w:-}" == "$want_w" && "${have_h:-}" == "$want_h" ]] && exit 0
+  sleep 0.1
+done
+exit 0  # don't hang Sunshine if KWin never confirms
