@@ -47,4 +47,4 @@ alias shad='bunx --bun shadcn@latest'
 
 # opencode
 fish_add_path /home/tn/.opencode/bin
-alias oc='opencode'
+alias code='opencode'
